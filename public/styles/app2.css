@@ -1,0 +1,164 @@
+/* ==============================================
+            FONT FACE
+    ============================================= */
+
+@font-face {
+    font-family: 'Stinger Trial';
+    src: url('/fonts/StingerTrial-Regular.woff2') format('woff2'),
+        url('/fonts/StingerTrial-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+@font-face {
+    font-family: 'Louis George Cafe';
+    src: url('/fonts/LouisGeorgeCafe.woff2') format('woff2'),
+         url('/fonts/LouisGeorgeCafe.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* ==============================================
+            Variables Globales
+    ============================================= */
+
+:root {
+  --color-yellow-light: #FDE4A7;
+  --color-blue-dark:   #0D4E8E;
+  --color-red:         #E51C30;
+  --color-yellow:      #EEAC19;
+  --color-blue-light:  #3285C1;
+  --color-green:       #3AAA36;
+  --color-pink:        #ED93AF;
+
+  --font-title: 'Stinger Trial', sans-serif;
+  --font-text: 'Louis George Cafe', sans-serif;
+
+  --font-size-base: 16px;
+  --font-size-title: 2.5rem;
+  --font-size-subtitle: 1.5rem;
+
+  --border-radius: 8px;
+  --transition: all 0.3s ease-in-out;
+
+  --shadow-light: 0px 4px 10px rgba(0,0,0,0.1);
+  --shadow-medium: 0px 6px 15px rgba(0,0,0,0.15);
+  --spacing-section: 4rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-text);
+    font-size: var(--font-size-base);
+    background-color: var(--color-yellow-light);
+    color: var(var(--color-blue-dark));
+}
+
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+h1, h2, h3 {
+    font-family: var(--font-title);
+    color: var(--color-red);
+}
+
+
+.shadow-light {
+  box-shadow: var(--shadow-light);
+}
+
+
+/* ==============================================
+            BOUTON
+    ============================================= */
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-family: var(--font-title);
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: var(--border-radius);
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0,0,0.3,0.3);
+}
+
+/* Bouton primaire */
+.btn-primary {
+  background-color: var(--color-red);
+  color: var(--color-yellow-light);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #c91526; 
+  color: var(--color-yellow-light);
+}
+
+/* Bouton secondaire */
+.btn-secondary {
+  background-color: var(--color-yellow-light);
+  color: var(--color-red);
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color:  #f5d47f; 
+  color: var(--color-red);
+}
+
+/* Bouton outline primaire */
+.btn-outline-primary {
+  background-color: transparent;
+ color: var(--color-red);  
+ border: 1px solid var(--color-red);
+}
+
+.btn-outline-primary:hover {
+  background-color: #c91526;
+  color: var(--color-yellow-light);
+  border: 1px solid var(--color-red);
+}
+
+
+
+
+/* ==============================================
+            BACKGROUND
+    ============================================= */
+
+.bg-yellow {
+  background-color: var(--color-yellow-light);
+}
+
+.bg-red {
+  background-color: var(--color-red);
+  color: white;
+}
