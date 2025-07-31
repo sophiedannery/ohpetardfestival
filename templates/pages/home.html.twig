@@ -4,15 +4,68 @@
 {% endblock %}
 
 {% block body %}
-	<img src="{{ asset('assets/images/logo2.png')}}" alt="Logo Oh Pétard Festival" style="width: 100%; max-width: 600px; display: block; margin: 2rem auto;">
 
-	<div>
-		<h1>Oh Pétard festival !</h1>
-		<p>Cette police a l'air de fonctionner</p>
 
-		<button class="btn btn-primary">PRIMARY</button>
-		<button class="btn btn-outline-primary">OUTLINE PRIMARY</button>
-		<button class="btn btn-secondary">PRIMARY</button>
+	<section class="hero-logos">
+		<div class="container">
 
-	</div>
+			<div class="row align-items-center text-center">
+				<div class="col-4 position-relative">
+					<img src="{{ asset('assets/images/grimpeur.png')}}" class="grimpeur" alt="Grimpeur">
+				</div>
+				<div class="col-4">
+					<img src="{{ asset('assets/logos/Logo_festival.png')}}" alt="Logo Oh Pétard Festival" style="width: 100%; max-width: 400px; display: block;">
+				</div>
+				<div class="col-4">
+					<img src="{{ asset('assets/images/velo.png')}}" alt="Vélo" style="width: 100%; max-width: 250px; display: block;">
+				</div>
+			</div>
+
+		</div>
+	</section>
+
+	<section class="zones-texte text-center">
+
+		<div class="row g-0">
+			<div class="col-4 d-flex align-items-center justify-content-center bg-pink text-yellow-light fw-bold py-3">
+				<h2 class="m-0">good food<br>good ride<br>good music</h2>
+			</div>
+			<div class="col-4 d-flex align-items-center justify-content-center bg-yellow text-yellow-light fw-bold py-3">
+				<h2 class="m-0">buis<br>les<br>baronnies</h2>
+			</div>
+			<div class="col-4 d-flex align-items-center justify-content-center bg-blue text-yellow-light fw-bold py-3">
+				<h2 class="m-0">*<br>septembre</h2>
+			</div>
+		</div>
+
+	</section>
+
+	<section class="lineup-section text-center bg-red">
+		<div class="row g-0">
+			<div class="col-12  py-5 d-flex align-items-center flex-column">
+
+				<div class="lineup-text text-yellow-light">
+					<div class="lineup-big mb-2">DH URBAINE * CONCERTS DJ SET</div>
+					<div class="lineup-medium mb-2">CONTEST BLOC URBAIN * CINÉ DÉBAT</div>
+					<div class="lineup-small mb-2">TRACTO'SONO * SHOW TRIAL * CUVÉE OH PÉTARD</div>
+					<div class="lineup-xsmall mb-2">TABLE RONDE * STREET FOOD LOCALE *• ANIMATIONS FAMILLE</div>
+				</div>
+
+				<div class=" cta-buttons mt-5">
+					<a href="#billetterie" class="btn btn-secondary me-4">Billetterie</a>
+					<a href="#inscriptions" class="btn btn-secondary">Inscriptions</a>
+				</div>
+
+
+			</div>
+
+
+		</div>
+	</section>
+
+	<section>
+		<h1>coucou</h1>
+	</section>
+
+
 {% endblock %}

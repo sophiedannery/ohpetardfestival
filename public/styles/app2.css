@@ -11,6 +11,16 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Stinger Trial Heavy';
+    src: url('/fonts/StingerTrial-Heavy.woff2') format('woff2'),
+        url('/fonts/StingerTrial-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
 
 
 @font-face {
@@ -73,11 +83,7 @@ a {
   text-decoration: none;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
+
 
 
 h1, h2, h3 {
@@ -162,3 +168,121 @@ h1, h2, h3 {
   background-color: var(--color-red);
   color: white;
 }
+
+/* ==============================================
+            NAVBAR
+    ============================================= */
+
+.navbar-brand img,
+.logoNav {
+  height: 50px !important;
+  width: auto !important;
+}
+
+.navbar .nav-link{
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-blue-dark) !important;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-red) !important;
+}
+
+
+
+/* ==============================================
+            HERO
+    ============================================= */
+
+.hero-logos {
+    position: relative;
+    z-index: 2; 
+}
+
+.hero-logos .col-4 {
+    position: relative; 
+}
+
+.hero-logos .col-4:first-child {
+    align-self: flex-start; /* le grimpeur commence en haut de la ligne */
+}
+
+.grimpeur {
+    width: 100%;
+    max-width: 250px;
+    display: block;
+    position: absolute;
+    top: 0; /* point de départ en haut */
+    transform: translateY(20px); /* le fait descendre */
+    left: 50%;
+    transform: translate(-50%, 70px); /* centré horizontalement + descente */
+    z-index: 3;
+}
+
+.rectangles {
+    position: relative;
+    z-index: 1; 
+}
+
+.bg-pink { background-color: var(--color-pink); }
+.bg-yellow { background-color: var(--color-yellow); }
+.bg-blue { background-color: var(--color-blue-light); }
+
+.zones-texte h1,
+.zones-texte h2,
+.zones-texte h3 {
+    color: var(--color-yellow-light);
+    font-family: 'Stinger Trial Heavy';
+    font-size: 45px;
+}
+
+
+
+/* ==============================================
+            LINE UP
+    ============================================= */
+
+.lineup-section {
+    position: relative;
+}
+
+.bg-red {
+    background-color: var(--color-red);
+    color: white;
+}
+
+
+.lineup-text {
+    font-family: var(--font-title);
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+
+.lineup-big {
+    font-size: 3.5rem; 
+    font-weight: bold;
+}
+
+.lineup-medium {
+    font-size: 3rem; 
+    font-weight: bold;
+}
+
+.lineup-small {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.lineup-xsmall {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.text-yellow-light {
+    color: var(--color-yellow-light) !important;
+}
+
+
