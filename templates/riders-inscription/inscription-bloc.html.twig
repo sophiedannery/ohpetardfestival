@@ -1,13 +1,122 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Inscriptions Riders
+{% block title %}Inscription Bloc Urbain - Oh Pétard Festival
 {% endblock %}
 
 {% block body %}
-	<div style="text-align:center; margin-top:50px;">
-		<h1>Choisissez votre discipline</h1>
-		<p>VCOUCOU BLOC.</p>
 
 
-	</div>
-{% endblock %}
+	<section class="bloc-hero text-center d-flex align-items-center justify-content-center">
+		<div class="bloc-hero-content">
+			<img src="{{ asset('assets/logos/Logo_JAUNE.png') }}" alt="Logo Oh Pétard" class="img-fluid mb-4" style="max-width: 200px;">
+
+			<h1 class="fw-bold display-4 lineup-text">CONTEST BLOC URBAIN</h1>
+
+			<a href="https://www.helloasso.com/associations/association-oh-petard/boutiques/inscription-contest-bloc-urbain-oh-petard-festival" target="_blank" rel="noopener noreferrer" class="btn btn-secondary mt-4 fw-bold">
+				INSCRIPTION
+			</a>
+		</div>
+	</section>
+
+	<section class="container inscription py-5">
+
+
+		<section class="zones-texte bandeau-good-inscription py-3 text-center">
+			<h3 class="m-0 lineup-big">
+				<span class="event">nouvel événement</span>
+				<span class="etoile">*</span>
+				<span class="spot">nouveau spot</span>
+				<span class="etoile">*</span>
+				<span class="sector">nouveaux secteurs urbains</span>
+			</h3>
+		</section>
+
+
+		<div class="row g-4 align-items-start align-items-center justify-content-center mt-5">
+
+			<div class="col-md-6">
+				<div class="info-box p-4 h-100">
+
+					<div class="intro-text text-start mb-5 mx-auto">
+						<p class="lead">Un contest de bloc, OUI. Mais un contest de bloc
+							<strong>urbain</strong>, il fallait y penser ! 💪<br>
+							Prends ton crashpad, tes chaussons, et viens découvrir Buis-les-Baronnies à la force de tes bras. Situé au pied du Mont Ventoux, le village accueille la toute première édition du
+							<strong>Oh Pétard Festival</strong>
+							!</p>
+						<p>Pour toi, qui trouve le moindre coin à escalader, on t'a trouvé des blocs à différents coins de la ville.</p>
+
+						<a href="#" class="link-more-yellow">En savoir plus sur le bloc urbain</a>
+					</div>
+
+
+				</div>
+			</div>
+
+			<div class="col-md-6 text-center">
+				<div class="date-contest mb-4">
+					<h4 class="m-0 lineup-text">
+						samedi
+						<span class="number ms-1">27</span>septembre
+					</h4>
+				</div>
+
+
+				<div class="tarifs mb-4">
+					<ul class="list-unstyled">
+						<li>
+							<strong>12€</strong>
+							→ Contest + repas</li>
+						<li>
+							<strong>22€</strong>
+							→ Contest + repas + concert</li>
+					</ul>
+				</div>
+
+				<a href="https://www.helloasso.com/associations/association-oh-petard/boutiques/inscription-contest-bloc-urbain-oh-petard-festival" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+					Je m'inscris
+				</a>
+
+				<div class="text-center mt-3">
+					<p class="small-text">
+						Licence FFME ou CAF en cours
+						<strong>ou</strong>
+						certificat médical de non-contre-indication à l’escalade en compétition
+						<strong>obligatoire</strong>.
+					</p>
+				</div>
+
+			</div>
+
+
+		</div>
+
+
+		<div
+			class="row align-items-center mt-5">
+			{# <h5 class="text-center mb-4 fw-bold">Nos partenaires escalade</h5> #}
+
+			<div class="col d-flex justify-content-center gap-5 flex-wrap">
+				<a href="https://www.outdoormixfestival.com/" target="_blank" rel="noopener noreferrer" class="me-4">
+					<img src="{{ asset('assets/partenaires/partenaire_Outdoomix.png') }}" alt="Partenaire 4" class="img-fluid" style="max-height: 50px;">
+				</a>
+				<a href="https://ventouxbloc.com/" target="_blank" rel="noopener noreferrer" class="me-4">
+					<img src="{{ asset('assets/partenaires/partenaire_Ventoux_Bloc.webp') }}" alt="Partenaire 4" class="img-fluid" style="max-height: 50px;">
+				</a>
+				<a href="https://nograd.fr/" target="_blank" rel="noopener noreferrer" class="me-4">
+					<img src="{{ asset('assets/partenaires/partenaire_Nograd.png') }}" alt="Partenaire 4" class="img-fluid" style="max-height: 50px;">
+				</a>
+				<a href="https://brazz.it/fr/" target="_blank" rel="noopener noreferrer" class="me-4">
+					<img src="{{ asset('assets/partenaires/partenaire_Brazz.jpg') }}" alt="Partenaire 4" class="img-fluid" style="max-height: 50px;">
+				</a>
+			</div>
+		</div>
+
+
+		<div class="text-center mt-5">
+			<a href="{{ path('app_rider_registration')}}">
+				<button class="btn btn-outline-primary">Retour</button>
+			</a>
+		</div>
+
+
+	{% endblock %}
