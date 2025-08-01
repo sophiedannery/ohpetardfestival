@@ -78,6 +78,7 @@ body {
     font-size: var(--font-size-base);
     background-color: var(--color-yellow-light);
     color: var(--color-blue-dark);
+    padding-top: 80px;
 }
 
 html, body {
@@ -195,6 +196,10 @@ h1, h2, h3 {
 }
 .bg-yellow { 
   background-color: var(--color-yellow) !important; 
+}
+
+.bg-yellow-light { 
+  background-color: var(--color-yellow-light) !important; 
 }
 .bg-blue { 
   background-color: var(--color-blue-light) !important; 
@@ -503,4 +508,45 @@ h1, h2, h3 {
     z-index: 2;     
 }
 
+
+
+/* ==============================================
+            PAGE INSCRIPTION
+    ============================================= */
+
+.section-carres-inscription {
+    position: relative;
+    margin-bottom: 200px; /* espace pour l'image qui dépasse */
+}
+    
+.carre {
+    border-radius: 30px; 
+    box-shadow: var(--shadow-light); 
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.carre:hover {
+    transform: translateY(-5px); 
+}
+
+
+.carre-register-small { height: 350px; }
+.carre-register-medium { height: 350px; }
+
+
+.carre-img {
+    max-width: 70%;
+    position: absolute;
+}
+
+
+.carre-img-musique { bottom: -60%; }
+.carre-img-sports { bottom: -50%; }
+
+.inscription h1 {
+    color: var(--color-red);
+}
 
