@@ -38,7 +38,7 @@
     ============================================= */
 
 :root {
-  --color-yellow-light: #FDE4A7;
+  --color-yellow-light: #FDEFCF    ;
   --color-blue-dark:   #0D4E8E;
   --color-red:         #E51C30;
   --color-yellow:      #EEAC19;
@@ -49,7 +49,7 @@
   --font-title: 'Stinger Trial', sans-serif;
   --font-text: 'Louis George Cafe', sans-serif;
 
-  --font-size-base: 16px;
+  --font-size-base: 1.2rem;
   --font-size-title: 2.5rem;
   --font-size-subtitle: 1.5rem;
 
@@ -58,6 +58,7 @@
 
   --shadow-light: 0px 4px 10px rgba(0,0,0,0.1);
   --shadow-medium: 0px 6px 15px rgba(0,0,0,0.15);
+  --shadow-heavy: 0px 6px 15px rgba(0,0,0,0.5);
   --spacing-section: 4rem;
 }
 
@@ -75,7 +76,7 @@ body {
     font-family: var(--font-text);
     font-size: var(--font-size-base);
     background-color: var(--color-yellow-light);
-    color: var(var(--color-blue-dark));
+    color: var(--color-blue-dark);
 }
 
 
@@ -88,13 +89,22 @@ a {
 
 h1, h2, h3 {
     font-family: var(--font-title);
-    color: var(--color-red);
+    color: var(--color-yellow-light);
+}
+
+.number {
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 900;
+  font-style: normal;
 }
 
 
 .shadow-light {
   box-shadow: var(--shadow-light);
 }
+
+
+
 
 
 /* ==============================================
@@ -124,20 +134,20 @@ h1, h2, h3 {
 }
 
 .btn-primary:hover {
-  background-color: #c91526; 
+  background-color:var(--color-pink); 
   color: var(--color-yellow-light);
 }
 
 /* Bouton secondaire */
 .btn-secondary {
   background-color: var(--color-yellow-light);
-  color: var(--color-red);
+  color: var(--color-pink);
   border: none;
 }
 
 .btn-secondary:hover {
-  background-color:  #f5d47f; 
-  color: var(--color-red);
+  background-color:  var(--color-blue-light); 
+  color: var(--color-yellow-light);
 }
 
 /* Bouton outline primaire */
@@ -160,13 +170,28 @@ h1, h2, h3 {
             BACKGROUND
     ============================================= */
 
-.bg-yellow {
-  background-color: var(--color-yellow-light);
-}
 
 .bg-red {
   background-color: var(--color-red);
   color: white;
+}
+
+.bg-pink { 
+  background-color: var(--color-pink) !important; 
+}
+.bg-yellow { 
+  background-color: var(--color-yellow) !important; 
+}
+.bg-blue { 
+  background-color: var(--color-blue-light) !important; 
+}
+
+.bg-dark-blue { 
+  background-color: var(--color-blue-dark) !important; 
+}
+
+.bg-green { 
+  background-color: var(--color-green) !important; 
 }
 
 /* ==============================================
@@ -212,7 +237,7 @@ h1, h2, h3 {
 
 .grimpeur {
     width: 100%;
-    max-width: 250px;
+    max-width: 300px;
     display: block;
     position: absolute;
     top: 0; /* point de départ en haut */
@@ -234,7 +259,6 @@ h1, h2, h3 {
 .zones-texte h1,
 .zones-texte h2,
 .zones-texte h3 {
-    color: var(--color-yellow-light);
     font-family: 'Stinger Trial Heavy';
     font-size: 45px;
 }
@@ -283,6 +307,182 @@ h1, h2, h3 {
 
 .text-yellow-light {
     color: var(--color-yellow-light) !important;
+}
+/* ==============================================
+            ABOUT
+    ============================================= */
+.about h3 {
+  color: var(--color-red);
+}
+
+/* ==============================================
+            CARRES X3
+    ============================================= */
+
+
+.carre {
+    border-radius: 15px; 
+    box-shadow: var(--shadow-light); 
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: visible;
+}
+
+.carre:hover {
+    transform: translateY(-5px); 
+}
+
+
+.carre-small { height: 200px; }
+.carre-medium { height: 240px; }
+.carre-large { height: 280px; }
+
+
+.carre-img {
+    max-width: 300px;
+    position: absolute;
+}
+
+
+.carre-img-musique { bottom: -50px; }
+.carre-img-sports { bottom: -100px; }
+.carre-img-agriculture { bottom: -70px; }
+
+
+
+
+
+
+/* ==============================================
+            ANIMATION & STREET FOOD
+    ============================================= */
+
+.section-animations-food {
+    background-color: var(--color-blue-light);
+    overflow: visible;
+}
+
+.section-animations-food .bloc-info {
+    max-width: 600px;
+    margin: 0; 
+    text-align: left;
+}
+
+
+ .section-animations-food p{
+    color: var(--color-yellow-light) !important;
+    
+}
+
+.section-animations-food h2 {
+  text-shadow: var(--shadow-heavy);
+}
+
+.link-more {
+    display: inline-block;
+    margin-top: 0.2rem;
+    font-family: var(--font-title);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-yellow-light);
+    border-bottom: 2px solid var(--color-yellow-light);
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.link-more:hover {
+    color: var(--color-pink);
+    border-color: var(--color-pink);
+}
+
+
+.illu-sandwich {
+    position: absolute;
+    right: -50px;   
+    bottom: -60px;  
+    max-width: 300px; 
+    z-index: 2;     
+}
+
+
+
+/* ==============================================
+            CTA BENEVOLES
+    ============================================= */
+
+
+.benevoles-container {
+    max-width: 900px; /* ou 800px pour plus étroit */
+}
+
+.benevoles-section h2 {
+  color: var(--color-red);
+}
+
+
+
+/* ==============================================
+            BANDEAU GOOD
+    ============================================= */
+
+.bandeau-good .h3 {
+    font-family: 'Stinger Trial Heavy';
+}
+
+.bandeau-good .food {
+    color: var(--color-pink);
+    font-size: 65px;
+}
+
+.bandeau-good .ride {
+    color: var(--color-yellow);
+    font-size: 65px;
+}
+
+.bandeau-good .music {
+    color: var(--color-green);
+    font-size: 65px;
+}
+
+.bandeau-good .etoile {
+    color: var(--color-blue-dark);
+    margin: 0 0.5rem; 
+}
+
+
+/* ==============================================
+            ADHESION
+    ============================================= */
+
+.section-adherer {
+    background-color: transparent;
+    overflow: visible;
+}
+
+.adhesion-box {
+    background-color: var(--color-pink);
+    border-radius: 20px;
+    color: var(--color-yellow-light);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.adhesion-box h2 {
+    font-family: var(--font-title);
+    
+}
+
+.adhesion-box p {
+    max-width: 600px; 
+    margin: 0 auto;
+}
+
+.illu-micro {
+    position: absolute;
+    left: -50px;   
+    bottom: -60px;  
+    max-width: 300px; 
+    z-index: 2;     
 }
 
 
