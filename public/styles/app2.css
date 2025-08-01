@@ -675,3 +675,32 @@ h1, h2, h3 {
 
 
 
+
+/* ==============================================
+            BILLETERIE
+    ============================================= */
+.billetterie-page {
+    background-color: var(--color-yellow-light);
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.billetterie-page h1 {
+    color: var(--color-red);
+}
+
+.billetterie-page p.lead {
+    font-family: var(--font-text);
+    color: var(--color-blue-dark);
+}
+
+.billetterie-page .fa-brands {
+    color: var(--color-green);
+    transition: color 0.3s ease;
+}
+
+.billetterie-page .fa-brands:hover {
+    color: var(--color-pink);
+}

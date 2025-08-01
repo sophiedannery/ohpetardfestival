@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Billetterie - Oh Pétard Festival
+{% endblock %}
+
+{% block body %}
+	<section class="billetterie-page text-center py-5">
+		<div class="container">
+			<h1 class="fw-bold display-5 mb-3">🎟️ La billetterie ouvre bientôt.</h1>
+			<p class="lead mb-4">
+				<strong>Reste connecté pour ne pas rater l’ouverture !</strong>
+			</p>
+			<div class="d-flex justify-content-center align-items-center text-center mt-4">
+				<a href="https://www.instagram.com/ohpetardfestival/" target="_blank" rel="noopener noreferrer">
+					<i class="fa-brands fa-square-instagram fa-2x me-3"></i>
+				</a>
+				<a href="https://www.facebook.com/p/Oh-P%C3%A9tard-festival-61576064947627/?_rdr" target="_blank" rel="noopener noreferrer">
+					<i class="fa-brands fa-square-facebook fa-2x"></i>
+				</a>
+			</div>
+
+			<div class="mt-5">
+				<img src="{{ asset('assets/images/tracteur.png') }}" alt="Billetterie bientôt disponible" class="img-fluid d-bloc mx-auto billetterie-image" style="width: 100%; max-width: 400px; display: block;">
+			</div>
+
+			<div class="text-center my-5">
+				<a href="{{ path('app_home')}}">
+					<button class="btn btn-outline-primary">Retour</button>
+				</a>
+			</div>
+
+		</div>
+	</section>
+{% endblock %}
