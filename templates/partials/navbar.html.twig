@@ -1,4 +1,8 @@
-<nav class="navbar navbar-expand-lg py-3" style="background-color: var(--color-yellow-light); font-family: var(--font-title);">
+<nav class="navbar navbar-expand-lg py-1 fixed-top {% if app.request.attributes.get('_route') starts with 'app_home' %}
+        bg-yellow-light
+    {% else %}
+        bg-footer
+    {% endif %}" style="font-family: var(--font-title);">
 
 	<div class="container">
 
@@ -30,9 +34,8 @@
 
 
 			<div class="d-flex">
-				<a href="#billetterie" class="btn btn-primary ms-lg-3">
-					<i class="fa-solid fa-ticket me-1"></i>
-					INSCRIPTIONS
+				<a href="{{ path('app_rider_registration')}}" class="btn btn-primary ms-lg-3">
+					INSCRIPTION
 				</a>
 			</div>
 		</div>

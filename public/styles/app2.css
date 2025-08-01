@@ -78,6 +78,7 @@ body {
     font-size: var(--font-size-base);
     background-color: var(--color-yellow-light);
     color: var(--color-blue-dark);
+    padding-top: 70px;
 }
 
 html, body {
@@ -195,6 +196,10 @@ h1, h2, h3 {
 }
 .bg-yellow { 
   background-color: var(--color-yellow) !important; 
+}
+
+.bg-yellow-light { 
+  background-color: var(--color-yellow-light) !important; 
 }
 .bg-blue { 
   background-color: var(--color-blue-light) !important; 
@@ -447,6 +452,7 @@ h1, h2, h3 {
     font-family: 'Stinger Trial Heavy';
 }
 
+
 .bandeau-good .food {
     color: var(--color-pink);
     font-size: 65px;
@@ -502,5 +508,150 @@ h1, h2, h3 {
     max-width: 300px; 
     z-index: 2;     
 }
+
+
+
+/* ==============================================
+            PAGE INSCRIPTION
+    ============================================= */
+
+.section-carres-inscription {
+    position: relative;
+    margin-bottom: 200px; /* espace pour l'image qui dépasse */
+}
+    
+.carre {
+    border-radius: 30px; 
+    box-shadow: var(--shadow-light); 
+    transition: transform 0.2s ease;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.carre:hover {
+    transform: translateY(-5px); 
+}
+
+
+.carre-register-small { height: 350px; }
+.carre-register-medium { height: 350px; }
+
+
+.carre-img {
+    max-width: 70%;
+    position: absolute;
+}
+
+
+.carre-img-musique { bottom: -60%; }
+.carre-img-sports { bottom: -50%; }
+
+.inscription h1 {
+    color: var(--color-red);
+}
+
+
+
+/* ==============================================
+            INSCRIPTION BLOC
+    ============================================= */
+
+    /* Bandeau image */
+.bloc-hero {
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.3)), url('/assets/photos/main_escalade.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    position: relative;
+}
+
+.bloc-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+.bloc-hero h1, 
+.bloc-hero h2 {
+    color: var(--color-yellow);
+} 
+
+
+.bandeau-good-inscription .h3 {
+    font-family: 'Stinger Trial Heavy';
+}
+
+
+.bandeau-good-inscription .event {
+    color: var(--color-pink);
+    font-size: 35px;
+}
+
+.bandeau-good-inscription .spot {
+    color: var(--color-yellow);
+    font-size: 35px;
+}
+
+.bandeau-good-inscription .sector {
+    color: var(--color-green);
+    font-size: 35px;
+}
+
+.bandeau-good-inscription .etoile {
+    color: var(--color-blue-dark);
+    font-size: 35px;
+    margin: 0 0rem; 
+}
+
+
+
+.inscription h2,
+.inscription h3 {
+    color: var(--color-blue-dark);
+}
+
+.inscription h4 {
+    color: var(--color-yellow-light);
+}
+
+.inscription h5 {
+    color: var(--color-blue-light);
+}
+
+.date-contest {
+    background-color: var(--color-blue-light); 
+    display: inline-block; 
+    padding: 20px 40px; 
+    border-radius: 8px; 
+    text-align: center; 
+    min-width: 200px; 
+    text-align: center;
+}
+
+.date-contest .number {
+    font-size: 3rem; 
+    font-weight: bold;
+    display: block;
+    line-height: 1;
+}
+
+
+.link-more-yellow {
+    display: inline-block;
+    margin-top: 0.2rem;
+    font-family: var(--font-title);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-blue-dark);
+    border-bottom: 2px solid var(--color-blue-dark);
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.link-more-yellow:hover {
+    color: var(--color-pink);
+    border-color: var(--color-pink);
+}
+
 
 

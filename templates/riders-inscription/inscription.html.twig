@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscriptions Riders
+{% endblock %}
+
+{% block body %}
+	<section class="inscription">
+		<div style="text-align:center; margin-top:50px;">
+			<h1>Tu t'inscris où ?</h1>
+			<p>Contest amical de bloc urbain ou parcours de DH Urbaine.
+			</p>
+
+			<section class="section-carres-inscription  text-center py-5">
+				<div class="container">
+					<div class="row justify-content-center g-4">
+						<div class="col-12 col-md-6">
+							<a href="{{ path('app_inscription_bloc') }}" class="carre carre-register-small bg-green d-flex flex-column align-items-center position-relative overflow-visible text-decoration-none text-dark">
+								<h3 class="mt-2 fw-bold">BLOC URBAIN</h3>
+								<img src="{{ asset('assets/images/grimpeur.png') }}" alt="Musique" class="carre-img carre-img-musique">
+							</a>
+						</div>
+
+						<div class="col-12 col-md-6">
+							<a href="{{ path('app_inscription_dh') }}" class="carre carre-register-medium bg-red d-flex flex-column align-items-center position-relative overflow-visible ">
+								<h3 class="mt-2 fw-bold">DH URBAINE</h3>
+								<img src="{{ asset('assets/images/velo.png') }}" alt="Sports" class="carre-img carre-img-sports">
+							</a>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+		</div>
+	</section>
+{% endblock %}
