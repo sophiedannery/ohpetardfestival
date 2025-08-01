@@ -45,6 +45,7 @@
   --color-blue-light:  #3285C1;
   --color-green:       #3AAA36;
   --color-pink:        #ED93AF;
+  --color-footer:        #F8E5B5;
 
   --font-title: 'Stinger Trial', sans-serif;
   --font-text: 'Louis George Cafe', sans-serif;
@@ -79,9 +80,16 @@ body {
     color: var(--color-blue-dark);
 }
 
+html, body {
+    overflow-x: hidden;
+}
 
 a {
   text-decoration: none;
+}
+
+footer a {
+    color: var(--color-blue-dark);
 }
 
 
@@ -101,6 +109,12 @@ h1, h2, h3 {
 
 .shadow-light {
   box-shadow: var(--shadow-light);
+}
+
+.small-text {
+    font-family: var(--font-text);
+    font-size: 1rem;
+    color: var(--color-blue-dark);
 }
 
 
@@ -192,6 +206,10 @@ h1, h2, h3 {
 
 .bg-green { 
   background-color: var(--color-green) !important; 
+}
+
+.bg-footer { 
+  background-color: var(--color-footer) !important; 
 }
 
 /* ==============================================
