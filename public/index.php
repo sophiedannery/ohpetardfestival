@@ -1,11 +1,16 @@
 <?php
 
 $host = $_SERVER['HTTP_HOST'] ?? '';
-$requestUri = $_SERVER['REQUEST_URI'] ?? '';
 
-if ($host !== 'www.ohpetardfestival.com') {
-    header('Location: http://www.ohpetardfestival.com' . $requestUri, true, 301);
-    exit();
+if (!in_array($host, ['127.0.0.1', 'localhost'])) {
+    $requestUri = $_SERVER['REQUEST_URI'] ?? '';
+    if (
+        (!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] !== 'on') ||
+        ($host !== 'www.ohpetardfestival.com')
+    ) {
+        header('Location: https://www.ohpetardfestival.com' . $requestUri, true, 301);
+        exit();
+    }
 }
 
 use App\Kernel;
