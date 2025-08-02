@@ -1,0 +1,1057 @@
+/* ==============================================
+            FONT FACE
+    ============================================= */
+
+@font-face {
+    font-family: 'Stinger Trial';
+    src: url('/fonts/StingerTrial-Regular.woff2') format('woff2'),
+        url('/fonts/StingerTrial-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Stinger Trial Heavy';
+    src: url('/fonts/StingerTrial-Heavy.woff2') format('woff2'),
+        url('/fonts/StingerTrial-Heavy.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+@font-face {
+    font-family: 'Louis George Cafe';
+    src: url('/fonts/LouisGeorgeCafe.woff2') format('woff2'),
+         url('/fonts/LouisGeorgeCafe.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* ==============================================
+            Variables Globales
+    ============================================= */
+
+:root {
+  --color-yellow-light: #FEF7E6    ;
+  --color-blue-dark:   #0D4E8E;
+  --color-red:         #E51C30;
+  --color-yellow:      #EEAC19;
+  --color-blue-light:  #3285C1;
+  --color-green:       #3AAA36;
+  --color-pink:        #ED93AF;
+  --color-footer:        #F8E5B5;
+
+  --font-title: 'Stinger Trial', sans-serif;
+  --font-text: 'Louis George Cafe', sans-serif;
+  --font-number: "Londrina Solid", sans-serif;
+
+  --font-size-base: 1.2rem;
+  --font-size-title: 2.5rem;
+  --font-size-subtitle: 1.5rem;
+
+  --border-radius: 8px;
+  --transition: all 0.3s ease-in-out;
+
+  --shadow-light: 0px 4px 10px rgba(0,0,0,0.1);
+  --shadow-medium: 0px 6px 15px rgba(0,0,0,0.15);
+  --shadow-heavy: 0px 6px 15px rgba(0,0,0,0.5);
+  --spacing-section: 4rem;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+    font-family: var(--font-text);
+    font-size: var(--font-size-base);
+    background-color: var(--color-yellow-light);
+    color: var(--color-blue-dark);
+    padding-top: 65px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+footer a {
+    color: var(--color-blue-dark);
+}
+
+
+
+
+h1, h2, h3 {
+    font-family: var(--font-title);
+}
+
+.number {
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+.shadow-light {
+  box-shadow: var(--shadow-light);
+}
+
+.small-text {
+    font-family: var(--font-text);
+    font-size: 1rem;
+    color: var(--color-blue-dark);
+}
+
+.text-blue {
+    color: var(--color-blue-dark);
+}
+
+
+
+
+
+/* ==============================================
+            BOUTON
+    ============================================= */
+
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-family: var(--font-title);
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: var(--border-radius);
+  text-align: center;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0,0,0.3,0.3);
+}
+
+/* Bouton primaire */
+.btn-primary {
+  background-color: var(--color-red);
+  color: var(--color-yellow-light);
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color:var(--color-pink); 
+  color: var(--color-yellow-light);
+}
+
+/* Bouton secondaire */
+.btn-secondary {
+  background-color: var(--color-yellow-light);
+  color: var(--color-pink);
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color:  var(--color-blue-light); 
+  color: var(--color-yellow-light);
+}
+
+/* Bouton outline primaire */
+.btn-outline-primary {
+  background-color: transparent;
+ color: var(--color-blue-light);  
+ border: 1px solid var(--color-blue-light);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--color-blue-light);
+  color: var(--color-yellow-light);
+  border: 1px solid var(--color-blue-light);
+}
+
+
+
+
+/* ==============================================
+            BACKGROUND
+    ============================================= */
+
+
+.bg-red {
+  background-color: var(--color-red);
+  color: white;
+}
+
+.bg-pink { 
+  background-color: var(--color-pink) !important; 
+}
+.bg-yellow { 
+  background-color: var(--color-yellow) !important; 
+}
+
+.bg-yellow-light { 
+  background-color: var(--color-yellow-light) !important; 
+}
+.bg-blue { 
+  background-color: var(--color-blue-light) !important; 
+}
+
+.bg-dark-blue { 
+  background-color: var(--color-blue-dark) !important; 
+}
+
+.bg-green { 
+  background-color: var(--color-green) !important; 
+}
+
+.bg-footer { 
+  background-color: var(--color-footer) !important; 
+}
+
+/* ==============================================
+            NAVBAR
+    ============================================= */
+
+.navbar-brand img,
+.logoNav {
+  height: 50px !important;
+  width: auto !important;
+}
+
+.navbar .nav-link{
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--color-blue-dark) !important;
+  transition: color 0.3s ease-in-out;
+}
+
+.navbar .nav-link:hover {
+    color: var(--color-red) !important;
+}
+
+
+/* NAVBAR DROPDOWN */
+/* Couleur de fond du menu déroulant */
+.navbar .dropdown-menu {
+    background-color: var(--color-yellow-light); /* Jaune clair */
+    border: none; /* Supprime la bordure Bootstrap */
+    border-radius: 0.5rem; /* Coins arrondis */
+}
+
+/* Couleur des liens */
+.navbar .dropdown-menu .dropdown-item {
+    color: var(--color-red); /* Rouge */
+    font-weight: 600; /* Texte un peu plus gras */
+}
+
+/* Couleur au survol */
+.navbar .dropdown-menu .dropdown-item:hover,
+.navbar .dropdown-menu .dropdown-item:focus {
+    color: var(--color-yellow);
+    background-color: var(--color-yellow-light); /* Texte noir lisible */
+}
+
+/* Couleur au clic (état actif) */
+.navbar .dropdown-menu .dropdown-item:active,
+.navbar .dropdown-menu .dropdown-item.active {
+    background-color: var(--color-yellow-light); /* Orange pour clic */
+    color: var(--color-green); /* Texte blanc */
+}
+
+.navbar .dropdown-toggle::after {
+    display: none !important;
+}
+
+
+
+
+
+
+
+
+/* ==============================================
+            HERO SECTION HOME PAGE RESPONSIVE
+    ============================================= */
+
+.hero-desktop img,
+.hero-mobile img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Par défaut : masquer la version mobile */
+.hero-mobile {
+    display: none;
+}
+
+/* Mobile : afficher la version mobile, cacher la version desktop */
+@media (max-width: 767px) {
+    .hero-desktop {
+        display: none;
+    }
+    .hero-mobile {
+        display: block;
+    }
+}
+
+
+
+
+/* ==============================================
+            LINE UP
+    ============================================= */
+
+.lineup-section {
+    padding: 0rem 1rem;
+    position: relative;
+}
+
+.bg-red {
+    background-color: var(--color-red);
+    color: white;
+}
+
+
+.lineup-text {
+    font-family: var(--font-title);
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+
+.lineup-big {
+    font-size: 3.5rem; 
+    font-weight: bold;
+}
+
+.lineup-medium {
+    font-size: 3rem; 
+    font-weight: bold;
+}
+
+.lineup-small {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+.lineup-xsmall {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.lineup-big-mobile {
+    line-height: 1.6;
+}
+
+/* Tablettes (≤ 992px) */
+@media (max-width: 992px) {
+    .lineup-big {
+        font-size: 2.5rem;
+    }
+    .lineup-medium {
+        font-size: 2rem;
+    }
+    .lineup-small {
+        font-size: 1.7rem;
+    }
+    .lineup-xsmall {
+        font-size: 1.3rem;
+    }
+}
+
+/* Mobiles (≤ 576px) */
+@media (max-width: 576px) {
+    .lineup-big {
+        font-size: 2rem;
+    }
+    .lineup-medium {
+        font-size: 1.7rem;
+    }
+    .lineup-small {
+        font-size: 1.5rem;
+    }
+    .lineup-xsmall {
+        font-size: 1.3rem;
+    }
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .cta-buttons .btn {
+        width: 100%;
+    }
+
+    
+}
+.text-yellow-light {
+    color: var(--color-yellow-light) !important;
+}
+/* ==============================================
+            ABOUT
+    ============================================= */
+.about h3 {
+  color: var(--color-red);
+}
+
+
+
+
+
+
+
+/* ==============================================
+   SECTION CARRES (MUSIQUE / SPORTS / AGRICULTURE)
+   ============================================== */
+
+/* Style général pour chaque bloc carré */
+.carre {
+    border-radius: 15px;                  /* Coins arrondis */
+    box-shadow: var(--shadow-light);       /* Ombre légère */
+    transition: transform 0.2s ease;       /* Animation au survol */
+    cursor: pointer;
+    position: relative;                    /* Nécessaire pour placer l'image en absolute */
+    overflow: visible;                     /* Permet à l'image de déborder */
+}
+
+.carre:hover {
+    transform: translateY(-5px);           /* Légère élévation au survol */
+}
+
+/* Hauteur fixe de chaque type de carré */
+.carre-small { height: 200px; }
+.carre-medium { height: 240px; }
+.carre-large { height: 280px; }
+
+
+/* Styles communs aux images */
+.carre-img {
+    max-width: 300px;                      /* Taille maximale sur desktop */
+    position: absolute;                    /* Positionnement libre */
+}
+
+
+/* Positionnement spécifique pour chaque image sur DESKTOP */
+.carre-img-musique { bottom: -100px; }
+.carre-img-sports { bottom: -100px; }
+.carre-img-agriculture { bottom: -70px; }
+
+
+/* Couleur du titre dans les carrés */
+.section-carres h3 {
+    color: var(--color-yellow-light);
+}
+
+/* ===== Tablette (Bootstrap md : 768px → 1199px) ===== */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .carre-small { height: 180px; }
+.carre-medium { height: 200px; }
+.carre-large { height: 220px; }
+
+    .carre-img {  max-width: 200px;   }
+    .carre-img-musique { bottom: -20px; }     
+    .carre-img-sports { bottom: -50px; }
+    .carre-img-agriculture { bottom: -40px; }
+}
+
+
+/* ===== Mobile (≤ 767px) ===== */
+@media (max-width: 767.98px) {
+    .carre {
+        padding-bottom: 3rem; 
+    }
+    .carre-img { max-width: 300px; }
+    .carre-img-musique { bottom: -80px; }
+    .carre-img-sports { bottom: -130px; }
+    .carre-img-agriculture { bottom: -70px; }
+}
+
+
+
+/* ==============================================
+            ANIMATION & STREET FOOD
+    ============================================= */
+
+.section-animations-food {
+    background-color: var(--color-blue-light);
+    overflow: visible;
+}
+
+.section-animations-food h2{
+    color: var(--color-yellow-light);
+    
+}
+
+.section-animations-food .bloc-info {
+    max-width: 600px;
+    margin: 0; 
+    text-align: left;
+}
+
+
+ .section-animations-food p{
+    color: var(--color-yellow-light) !important;
+    
+}
+
+.section-animations-food h2 {
+  text-shadow: var(--shadow-heavy);
+}
+
+.link-more {
+    display: inline-block;
+    margin-top: 0.2rem;
+    font-family: var(--font-title);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-yellow-light);
+    border-bottom: 2px solid var(--color-yellow-light);
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.link-more:hover {
+    color: var(--color-pink);
+    border-color: var(--color-pink);
+}
+
+
+.illu-sandwich {
+    position: absolute;
+    right: -50px;   
+    bottom: -60px;  
+    max-width: 300px; 
+    z-index: 2;     
+}
+
+@media (max-width: 1200px) { 
+    .illu-sandwich {
+        max-width: 300px; 
+        bottom: -110px;    
+        right: -30px;     
+    }
+}
+
+@media (max-width: 900px) { 
+    .illu-sandwich {
+        max-width: 200px; 
+        bottom: -80px;    
+        right: -20px;     
+    }
+}
+
+
+.section-animations-food .bloc-info {
+    max-width: 900px; /* limite la largeur */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
+
+
+/* ==============================================
+            CTA BENEVOLES
+    ============================================= */
+
+
+.benevoles-container {
+    max-width: 900px; /* ou 800px pour plus étroit */
+}
+
+.benevoles-section h2 {
+  color: var(--color-red);
+}
+
+
+
+/* ==============================================
+            BANDEAU GOOD
+    ============================================= */
+
+.bandeau-good .h3 {
+    font-family: 'Stinger Trial Heavy';
+}
+
+
+.bandeau-good .food {
+    color: var(--color-pink);
+    font-size: 65px;
+}
+
+.bandeau-good .ride {
+    color: var(--color-yellow);
+    font-size: 65px;
+}
+
+.bandeau-good .music {
+    color: var(--color-green);
+    font-size: 65px;
+}
+
+.bandeau-good .etoile {
+    color: var(--color-blue-dark);
+    margin: 0 0.5rem; 
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .bandeau-good .food,
+    .bandeau-good .ride,
+    .bandeau-good .music {
+        font-size: 45px; /* plus petit que 65px */
+    }
+    .bandeau-good .etoile {
+        font-size: 40px; /* optionnel : réduire aussi les étoiles */
+    }
+}
+
+
+/* ==============================================
+            ADHESION
+    ============================================= */
+
+.section-adherer {
+    background-color: transparent;
+    overflow: visible;
+}
+
+.adhesion-box {
+    background-color: var(--color-pink);
+    border-radius: 20px;
+    color: var(--color-yellow-light);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.adhesion-box h2 {
+    font-family: var(--font-title);
+    
+}
+
+.adhesion-box p {
+    max-width: 600px; 
+    margin: 0 auto;
+}
+
+.illu-micro {
+    position: absolute;
+    left: -50px;   
+    bottom: -60px;  
+    max-width: 300px; 
+    z-index: 2;     
+}
+
+@media (min-width: 901px) and (max-width: 1200px)  { 
+    .illu-micro {
+        bottom: -35px; 
+        left: -70px;   
+    }
+}
+
+@media (max-width: 900px) { 
+    .illu-micro {
+        max-width: 200px; 
+        bottom: -80px;  
+        left: -65px;   
+    }
+}
+
+
+
+
+
+
+
+
+/* ==============================================
+   PAGE INSCRIPTION NEW
+   ============================================== */
+
+
+.inscription-riders-title {
+    color: var(--color-red);
+}
+
+.riders-choices-section .rider-choice-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.riders-choices-section .rider-choice-img {
+    width: 100%;
+    max-width: 600px;       /* Taille max identique */
+    height: auto;
+    aspect-ratio: 1 / 1;    /* Format carré harmonisé */
+    object-fit: contain;    /* Préserve l'image sans déformation */
+    transition: transform 0.3s ease;
+}
+
+.riders-choices-section .col-12 {
+    display: flex;
+    justify-content: center;
+}
+
+.riders-choices-section .rider-choice-link:hover .rider-choice-img {
+    transform: scale(1.05);
+}
+
+
+/* Responsive */
+@media (max-width: 576px) {
+    .riders-choices-section .rider-choice-img {
+        max-width: 600px;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* ==============================================
+            INSCRIPTION BLOC & DH
+    ============================================= */
+
+    /* Bandeau image */
+.bloc-hero {
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.3)), url('/assets/photos/main_escalade.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    position: relative;
+}
+
+.bloc-hero-dh {
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url('/assets/photos/velo_figure.jpg');
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+    position: relative;
+}
+
+.bloc-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+
+.bloc-hero h1, 
+.bloc-hero h2,
+.bloc-hero-dh h1, 
+.bloc-hero-dh h2 {
+    color: var(--color-yellow);
+} 
+
+
+.bandeau-good-inscription .h3 {
+    font-family: 'Stinger Trial Heavy';
+}
+
+
+.bandeau-good-inscription .event {
+    color: var(--color-pink);
+    font-size: 40px;
+}
+
+.bandeau-good-inscription .spot {
+    color: var(--color-yellow);
+    font-size: 40px;
+}
+
+.bandeau-good-inscription .sector {
+    color: var(--color-green);
+    font-size: 40px;
+}
+
+.bandeau-good-inscription .etoile {
+    color: var(--color-blue-dark);
+    font-size: 40px;
+    margin: 0 0rem; 
+}
+
+
+
+@media (max-width: 991.98px) {
+    .bandeau-good-inscription .event,
+    .bandeau-good-inscription .spot,
+    .bandeau-good-inscription .sector {
+        font-size: 30px; /* plus petit que 65px */
+    }
+    .bandeau-good-inscription .etoile {
+        font-size: 30px; /* optionnel : réduire aussi les étoiles */
+    }
+}
+
+
+
+.inscription h2,
+.inscription h3 {
+    color: var(--color-blue-dark);
+}
+
+.inscription h4 {
+    color: var(--color-yellow-light);
+}
+
+.inscription h5 {
+    color: var(--color-blue-light);
+}
+
+.date-contest {
+    background-color: var(--color-blue-light); 
+    display: inline-block; 
+    padding: 20px 40px; 
+    border-radius: 8px; 
+    text-align: center; 
+    min-width: 200px; 
+    text-align: center;
+}
+
+.date-contest .number {
+    font-size: 3rem; 
+    font-weight: bold;
+    display: block;
+    line-height: 1;
+}
+
+
+.link-more-yellow {
+    display: inline-block;
+    margin-top: 0.2rem;
+    font-family: var(--font-title);
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-blue-dark);
+    border-bottom: 2px solid var(--color-blue-dark);
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.link-more-yellow:hover {
+    color: var(--color-pink);
+    border-color: var(--color-pink);
+}
+
+
+
+
+/* ==============================================
+            BILLETERIE
+    ============================================= */
+.billetterie-page {
+    background-color: var(--color-yellow-light);
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.billetterie-page h1 {
+    color: var(--color-red);
+}
+
+.billetterie-page p.lead {
+    font-family: var(--font-text);
+    color: var(--color-blue-dark);
+}
+
+.billetterie-page .fa-brands {
+    color: var(--color-green);
+    transition: color 0.3s ease;
+}
+
+.billetterie-page .fa-brands:hover {
+    color: var(--color-pink);
+}
+
+
+
+.billetterie-image {
+    width: 100%;
+    max-width: 400px; /* desktop par défaut */
+}
+
+/* Tablette (768px → 991px) */
+@media (max-width: 991.98px) {
+    .billetterie-image {
+        max-width: 300px;
+    }
+}
+
+/* Mobile (≤ 767px) */
+@media (max-width: 767.98px) {
+    .billetterie-image {
+        max-width: 220px;
+    }
+}
+
+
+
+
+
+
+
+/* ==============================================
+   PROGRAMMATION (Dates + Événements)
+   ============================================== */
+
+
+/* Événements */
+.prog-event {
+    margin-bottom: 1.5rem;
+}
+
+.prog-event-title {
+    font-family: var(--font-title);
+    color: var(--color-green);
+    text-transform: uppercase;
+    font-size: 1.5rem; 
+    font-weight: bold;
+}
+
+.prog-horaire {
+    font-family: var(--font-number);
+    color: var(--color-blue);
+    text-transform: uppercase;
+    font-size: 1.3rem; 
+    font-weight: bold;
+}
+
+.prog-event-location {
+    margin: 0 0 0.25rem 0;
+    font-family: var(--font-text);
+    font-size: 1rem; 
+}
+
+/* .prog-event-title span {
+    font-family: var(--font-text);
+    font-size: 1rem; 
+    color: var(--color-pink);
+} */
+
+.prog-event-title .prog-kid-friendly {
+    font-family: var(--font-text);
+    font-size: 1rem; 
+    color: var(--color-pink);
+}
+
+.prog-event-link {
+    display: inline-block;
+    font-family: var(--font-text);
+    text-decoration: underline;
+    color: var(--color-blue-dark);
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.prog-event-link:hover {
+    color: var(--color-pink);
+    border-color: var(--color-pink);
+}
+
+
+
+/* date tile prog */
+
+.date-prog {
+    background-color: var(--color-yellow); 
+    display: inline-block; 
+    padding: 20px 40px; 
+    border-radius: 8px; 
+    text-align: center; 
+    min-width: 200px; 
+    text-align: center;
+}
+
+.date-prog .number {
+    font-size: 3rem; 
+    font-weight: bold;
+    display: block;
+    line-height: 1;
+}
+
+.date-prog h4 {
+    color: var(--color-yellow-light);
+}
+
+
+/* ==============================================
+PAGE RESTAURATION
+   ============================================== */
+
+.restau-texte {
+    font-family: var(--font-text);
+    font-size: 1.1rem; 
+    color: var(--color-blue-dark);
+    font-weight: 900;
+}
+
+/* date tile restau */
+
+.date-restau {
+    background-color: var(--color-yellow); 
+    display: inline-block; 
+    padding: 20px 40px; 
+    border-radius: 8px; 
+    text-align: center; 
+    min-width: 200px; 
+}
+
+.date-restau .number {
+    font-size: 2.5rem; 
+    font-weight: bold;
+    display: block;
+    line-height: 1;
+}
+
+.date-restau h4 {
+    color: var(--color-yellow-light);
+}
+
+
+
+/* bandeau restau programamtions */
+
+.date-restau-prog {
+    background-color: var(--color-blue-light); 
+    display: inline-block; 
+    padding: 20px 40px; 
+    border-radius: 8px; 
+    text-align: center; 
+    min-width: 200px; 
+}
+
+.date-restau-prog .number {
+    font-size: 2.5rem; 
+    font-weight: bold;
+    display: block;
+    line-height: 1;
+}
+
+.date-restau-prog h4 {
+    color: var(--color-yellow-light);
+}

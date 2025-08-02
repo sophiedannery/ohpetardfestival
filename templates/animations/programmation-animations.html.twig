@@ -1,0 +1,159 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Animations
+{% endblock %}
+
+{% block body %}
+
+	<section class="hero-desktop">
+		<img src="{{ asset('assets/images/hero-animations.png')}}" alt="Oh Pétard Festival">
+	</section>
+
+	<section class="hero-mobile">
+		<img src="{{ asset('assets/images/hero-mobile-animations.png')}}" alt="Oh Pétard Festival">
+	</section>
+
+	<section class="programme-section py-5">
+		<div class="container">
+			<div
+				class="row ">
+				<!-- Colonne gauche : Date -->
+				<div class="col-12 col-md-4 mb-4 mb-md-0 text-center">
+					<div class="date-prog mb-4 ">
+						<h4 class="m-0 lineup-text">
+							vendredi
+							<span class="number ms-1">26</span>septembre
+						</h4>
+					</div>
+				</div>
+
+				<!-- Colonne droite : Événements -->
+				<div class="col-12 col-md-8 px-4 mx-md-0">
+
+					<div class="prog-event mb-4  mt-5 mt-md-0">
+						<h5 class="prog-event-title mb-3">Ciné Débat</h5>
+						<p class="m-0">
+							<span class="prog-horaire me-2">19h15</span><br class="d-block d-md-none">
+							Diffusion du film
+							<em>Demain la vallée</em>
+							(1h04min) de Jérôme Prudent, suivi d'un échange autour du film.</p>
+						<p class="prog-event-location m-0">📍 Cinéma le Reg'Art</p>
+						<a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=1000002857.html" class="prog-event-link mt-2" target="_blank" rel="noopener noreferrer">En savoir plus sur le film</a>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section class="programme-section py-5">
+		<div class="container">
+			<div
+				class="row ">
+				<!-- Colonne gauche : Date -->
+				<div class="col-12 col-md-4 mb-4 mb-md-0 text-center">
+					<div class="date-prog mb-4 ">
+						<h4 class="m-0 lineup-text">
+							samedi
+							<span class="number ms-1">27</span>septembre
+						</h4>
+					</div>
+				</div>
+
+				<!-- Colonne droite : Événements -->
+				<div class="col-12 col-md-8 px-4 mx-md-0">
+
+					<div class="prog-event mb-4  mt-5 mt-md-0">
+						<h5 class="prog-event-title mb-3">Chasse au trésor<br>
+							<span class="prog-kid-friendly">KIDS FRIENDLY</span>
+						</h5>
+						<p class="m-0">
+							<span class="prog-horaire me-2">10h - 12h</span><br class="d-block d-md-none">
+							Une chasse au trésor pour petits et grands... surprises garanties !
+						</p>
+						<p class="prog-event-location m-0">📍 Rue Malgarni</p>
+						{# <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=1000002857.html" class="prog-event-link mt-2" target="_blank" rel="noopener noreferrer">En savoir plus sur le film</a> #}
+					</div>
+
+					<div class="prog-event mb-4  mt-5 ">
+						<h5 class="prog-event-title mb-3">Cuvée Oh Pétard</h5>
+						<p class="m-0">
+							<span class="prog-horaire me-2">11h - 18h</span><br class="d-block d-md-none">
+							Assistez à la naissance de la Cuvée Oh Pétard ! Vin pressé sur place, 100% ambiance du festival
+						</p>
+						<p class="prog-event-location m-1">📍 Rue Malgarni</p>
+						<a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=1000002857.html" class="prog-event-link mt-2" target="_blank" rel="noopener noreferrer">En savoir plus</a>
+					</div>
+
+					<div class="prog-event mb-4  mt-5 ">
+						<h5 class="prog-event-title mb-3">Décoration Tracto'Sono<br>
+							<span class="prog-kid-friendly">KIDS FRIENDLY</span>
+						</h5>
+						<p class="m-0">
+							<span class="prog-horaire me-2">14h - 18h</span><br class="d-block d-md-none">
+							À vos pinceaux et idées ! Customiser le Tracto'sono avant sa soirée musicale.
+						</p>
+						<p class="prog-event-location m-0">📍 Rue Malgarni, Place du marché</p>
+						{# <a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=1000002857.html" class="prog-event-link mt-2" target="_blank" rel="noopener noreferrer">En savoir plus sur le film</a> #}
+					</div>
+
+					<div class="prog-event mb-4  mt-5 ">
+						<h5 class="prog-event-title mb-3">Show Trial<br>
+							{# <span class="prog-kid-friendly">KIDS FRIENDLY</span> #}
+						</h5>
+						<p class="m-0">
+							<span class="prog-horaire me-2">20h</span><br class="d-block d-md-none">
+							Démonstration de trial à couper le souffle.
+						</p>
+						<p class="prog-event-location m-0">📍 La Palun</p>
+						<a href="https://www.allocine.fr/film/fichefilm_gen_cfilm=1000002857.html" class="prog-event-link mt-2" target="_blank" rel="noopener noreferrer">En savoir plus</a>
+					</div>
+
+
+					<div class="prog-event mb-4  mt-5">
+						<h5 class=" prog-event-title mb-3">
+							Et toute la jounée, Street Food Locale :
+						</h5>
+						<div class="row text-center">
+							<div class="col-12 col-md-6 ">
+								<div class="date-restau-prog mb-4 ">
+									<h4 class="m-0 lineup-text">
+										<span class="number ms-1">9h - 18h</span>Place aux herbes
+									</h4>
+								</div>
+							</div>
+							<div class="col-12 col-md-6 ">
+								<div class="date-restau-prog mb-4 ">
+									<h4 class="m-0 lineup-text">
+										<span class="number ms-1">20h - 1h</span>La Palun
+									</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<section class="zones-texte bandeau-good-inscription py-3 text-center">
+		<h3 class="m-0 lineup-big d-flex flex-column flex-md-row align-items-center justify-content-center gap-2">
+			<span class="event">good food</span>
+			<span class="etoile d-none d-md-inline">*</span>
+			<span class="spot">good ride</span>
+			<span class="etoile d-none d-md-inline">*</span>
+			<span class="sector">good music</span>
+		</h3>
+	</section>
+
+	<div class="text-center mt-5 mb-4">
+		<a href="{{ path('app_home')}}">
+			<button class="btn btn-outline-primary">Retour</button>
+		</a>
+	</div>
+{% endblock %}

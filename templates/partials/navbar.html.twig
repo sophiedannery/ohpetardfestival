@@ -1,0 +1,63 @@
+<nav class="navbar navbar-expand-lg py-1 fixed-top bg-yellow-light" style="font-family: var(--font-title);">
+
+
+	<div
+		class="container">
+
+		<!-- Logo -->
+		<a class="navbar-brand" href="{{ path('app_home') }}" style="color: var(--color-red);" data-turbo="false">
+			<img src="{{ asset('assets/logos/Logo_BLEU_MER.png')}}" alt="Logo Oh Pétard !" class="logoNav">
+		</a>
+
+		<!-- Bouton menu burger -->
+		<button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarOhPetard" aria-controls="navbarOhPetard" aria-expanded="false" aria-label="Toggle navigation">
+			<i class="fa-solid fa-bars fa-lg text-blue"></i>
+		</button>
+
+		<!-- Menu principal -->
+		<div class="collapse navbar-collapse" id="navbarOhPetard">
+			<ul
+				class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+				<!-- Dropdown PROGRAMMATION -->
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownProgrammation" role="button" data-bs-toggle="dropdown" aria-expanded="false" data-turbo="false">
+						PROGRAMMATION
+					</a>
+					<ul class="dropdown-menu" aria-labelledby="navbarDropdownProgrammation">
+						<li>
+							<a class="dropdown-item" href="{{ path('app_musique_prog') }}" data-turbo="false">MUSIQUE</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="{{ path('app_sports_prog') }}" data-turbo="false">SPORTS</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="{{ path('app_agri_prog') }}" data-turbo="false">AGRICULTURE</a>
+						</li>
+						<li>
+							<a class="dropdown-item" href="{{ path('app_anim_prog') }}" data-turbo="false">ANIMATIONS</a>
+						</li>
+					</ul>
+				</li>
+
+				<!-- Autres liens -->
+				<li class="nav-item">
+					<a class="nav-link" href="{{ path('app_billeterie') }}" data-turbo="false">BILLETERIE</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#agriculture" data-turbo="false">OH PÉTARD !</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#animations" data-turbo="false">INFOS PRATIQUES</a>
+				</li>
+			</ul>
+
+			<!-- Bouton inscription -->
+			<div class="d-flex">
+				<a href="{{ path('app_rider_registration') }}" class="btn btn-primary ms-lg-3" data-turbo="false">
+					INSCRIPTION
+				</a>
+			</div>
+		</div>
+	</div>
+</nav>

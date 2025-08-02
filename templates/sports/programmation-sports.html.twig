@@ -1,0 +1,133 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Programmation Sports
+{% endblock %}
+
+{% block body %}
+
+	<section class="hero-desktop">
+		<img src="{{ asset('assets/images/hero-sports.png')}}" alt="Oh Pétard Festival">
+	</section>
+
+	<section class="hero-mobile">
+		<img src="{{ asset('assets/images/hero-mobile-sports.png')}}" alt="Oh Pétard Festival">
+	</section>
+
+	<section class="programme-section py-5">
+		<div class="container">
+
+			<div
+				class="row ">
+
+				<!-- Colonne gauche : Date -->
+				<div class="col-12 col-md-4 mb-4 mb-md-0 text-center">
+					<div class="date-prog mb-4 ">
+						<h4 class="m-0 lineup-text">
+							samedi
+							<span class="number ms-1">27</span>septembre
+						</h4>
+					</div>
+				</div>
+
+				<!-- Colonne droite : Événements -->
+				<div class="col-12 col-md-8 px-4 mx-md-0">
+
+					<div class="row align-items-start">
+						<div class="col-12 col-md-6">
+
+							<div class="prog-event mb-4">
+								<h5 class="prog-event-title">DH URBAINE</h5>
+
+								<a href="{{ path('app_inscription_bloc')}}" data-turbo="false" class="prog-event-link ">Inscription</a>
+
+								<p class="mt-3 mb-0">
+									<span class="prog-horaire me-2">13h30</span><br class="d-block d-md-none">
+									Première manche</p>
+								<p class="prog-event-location m-0">📍 Départ à Coquillon</p>
+
+								<p class="mt-3 mb-0">
+									<span class="prog-horaire me-2">15h30</span><br class="d-block d-md-none">
+									Deuxième manche</p>
+								<p class="prog-event-location m-0">📍 Tout le village</p>
+
+								<p class="mt-3 mb-0 ">
+									<span class="prog-horaire me-2">18h</span><br class="d-block d-md-none">
+									Finale</p>
+								<p class="prog-event-location m-0">📍 Tout le village</p>
+
+								<p class="mt-3 mb-0">
+									<span class="prog-horaire me-2">19h</span><br class="d-block d-md-none">
+									Podiums</p>
+								<p class="prog-event-location m-0">📍 Place aux herbes</p>
+
+
+							</div>
+
+						</div>
+						<div class="col-12 col-md-6">
+
+							<div class="prog-event mb-4 mt-5 mt-md-0">
+								<h5 class="prog-event-title">BLOC URBAIN</h5>
+								<a href="{{ path('app_inscription_bloc')}}" data-turbo="false" class="prog-event-link ">Inscription</a>
+								<p class="mt-3 mb-0">
+									<span class="prog-horaire me-2">14h - 18h</span><br class="d-block d-md-none">
+									Contest amical de bloc urbain</p>
+								<p class="prog-event-location m-0">📍 Tout le village</p>
+
+								<p class="mt-3 mb-0">
+									<span class="prog-horaire me-2">19h</span><br class="d-block d-md-none">
+									Podiums</p>
+								<p class="prog-event-location m-0">📍 Place aux herbes</p>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="prog-event mb-4  mt-5">
+						<h5 class=" prog-event-title mb-3">
+							Et toute la jounée, Street Food Locale :
+						</h5>
+						<div class="row text-center">
+							<div class="col-12 col-md-6 ">
+								<div class="date-restau-prog mb-4 ">
+									<h4 class="m-0 lineup-text">
+										<span class="number ms-1">9h - 18h</span>Place aux herbes
+									</h4>
+								</div>
+							</div>
+							<div class="col-12 col-md-6 ">
+								<div class="date-restau-prog mb-4 ">
+									<h4 class="m-0 lineup-text">
+										<span class="number ms-1">20h - 1h</span>La Palun
+									</h4>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+
+	<section class="zones-texte bandeau-good-inscription py-3 text-center">
+		<h3 class="m-0 lineup-big d-flex flex-column flex-md-row align-items-center justify-content-center gap-2">
+			<span class="event">good food</span>
+			<span class="etoile d-none d-md-inline">*</span>
+			<span class="spot">good ride</span>
+			<span class="etoile d-none d-md-inline">*</span>
+			<span class="sector">good music</span>
+		</h3>
+	</section>
+
+	<div class="text-center mt-5 mb-4">
+		<a href="{{ path('app_home')}}">
+			<button class="btn btn-outline-primary">Retour</button>
+		</a>
+	</div>
+
+
+{% endblock %}

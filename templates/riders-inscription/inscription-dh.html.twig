@@ -1,0 +1,119 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription DH Urbaine - Oh Pétard Festival
+{% endblock %}
+
+{% block body %}
+
+
+	<section class="bloc-hero-dh text-center d-flex align-items-center justify-content-center">
+		<div class="bloc-hero-content">
+			<img src="{{ asset('assets/logos/Logo_JAUNE.png') }}" alt="Logo Oh Pétard" class="img-fluid mb-4" style="max-width: 200px;">
+
+			<h1 class="fw-bold display-4 lineup-text">CONTEST DH URBAINE</h1>
+
+
+		</div>
+	</section>
+
+	<section class="container inscription py-5">
+
+
+		<section class="zones-texte bandeau-good-inscription py-3 text-center">
+			<h3 class="m-0 lineup-big d-flex flex-column flex-md-row align-items-center justify-content-center gap-2">
+				<span class="event">nouvel événement</span>
+				<span class="etoile d-none d-md-inline">*</span>
+				<span class="spot">nouveau spot</span>
+				<span class="etoile d-none d-md-inline">*</span>
+				<span class="sector">nouveaux secteurs urbains</span>
+			</h3>
+		</section>
+
+
+		<div class="row g-4 align-items-start align-items-center justify-content-center mt-5">
+
+			<div class="col-md-6">
+				<div class="info-box p-4 h-100">
+
+					<div class="intro-text text-start mb-5 mx-auto">
+						<p class="lead">Enjambe ton bike et viens découvrir les ruelles pittoresques de Buis-les-Baronnies ! Une occasion unique de découvrir ou redécouvrir le village, transformé pour l’occasion en terrain de jeu pour riders. Que tu sois rider confirmé ou amateur de sensations fortes, viens te mesurer à ce parcours inédit !</p>
+						<p>
+							📍
+							<strong>800m</strong>
+							de parcours, navette pour remonter et récompences à la clé.</p>
+						<p class="text-small">Equipement de sécurité obligatoire (<a href="#">voir le réglement</a>).</p>
+
+						<div class="text-start mt-3">
+							<p class="small-text">
+								À partir de
+								<strong>16 ans</strong>. Licence FFC en cours
+								<strong>ou</strong>
+								certificat médical de non-contre-indication à la pratique du cyclisme en compétition de moins d'un an
+								<strong>obligatoire</strong>
+							</p>
+						</div>
+
+						<a href="#" class="link-more-yellow">En savoir plus sur la DH urbaine</a>
+					</div>
+
+
+				</div>
+			</div>
+
+			<div class="col-md-6 text-center">
+				<div class="date-contest mb-4">
+					<h4 class="m-0 lineup-text">
+						samedi
+						<span class="number ms-1">27</span>septembre
+					</h4>
+				</div>
+
+
+				<div class="tarifs mb-4">
+					<ul class="list-unstyled">
+						<li>
+							<strong>30 €</strong>
+							→ Descente + repas</li>
+						<li>
+							<strong>40 €</strong>
+							→ Descente + repas + concert</li>
+					</ul>
+				</div>
+
+				<a href="https://www.helloasso.com/associations/association-oh-petard/boutiques/inscription-challenge-dh-urbaine-oh-petard-festival" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+					Je m'inscris
+				</a>
+
+
+			</div>
+
+
+		</div>
+
+
+		<div
+			class="row align-items-center mt-5">
+			{# <h5 class="text-center mb-4 fw-bold">Nos partenaires escalade</h5> #}
+
+			<div class="col d-flex justify-content-center gap-5 flex-wrap">
+				<a href="https://www.outdoormixfestival.com/" target="_blank" rel="noopener noreferrer" class="me-4">
+					<img src="{{ asset('assets/partenaires/partenaire_Outdoomix.png') }}" alt="Partenaire Outdoormix" class="img-fluid" style="max-height: 50px;">
+				</a>
+				<a href="https://www.crestdhurbanrace.com/" target="_blank" rel="noopener noreferrer" class="me-4">
+					<img src="{{ asset('assets/partenaires/partenaire_Crest.png') }}" alt="Partenaire Crest Urban Race" class="img-fluid" style="max-height: 50px;">
+				</a>
+				<a href="https://www.dieulefitdh.com/" target="_blank" rel="noopener noreferrer" class="me-4">
+					<img src="{{ asset('assets/partenaires/partenaire_Dieulefit.webp') }}" alt="Partenaire DH Dieulefit" class="img-fluid" style="max-height: 50px;">
+				</a>
+			</div>
+		</div>
+
+
+		<div class="text-center mt-5">
+			<a href="{{ path('app_rider_registration')}}">
+				<button class="btn btn-outline-primary">Retour</button>
+			</a>
+		</div>
+
+
+	{% endblock %}
