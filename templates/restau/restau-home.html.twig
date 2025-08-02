@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Street food locale
+{% endblock %}
+
+
+{% block body %}
+
+
+	<section class="hero-desktop">
+		<img src="{{ asset('assets/images/hero-restau.png')}}" alt="Oh Pétard Festival">
+	</section>
+
+	<section class="hero-mobile">
+		<img src="{{ asset('assets/images/hero-mobile-restau.png')}}" alt="Oh Pétard Festival">
+	</section>
+
+	<section class="py-5 restauration-content">
+		<div class="container text-center px-3">
+			<h2 class="mb-4" style="color: var(--color-red); font-family: var(--font-title);">
+				Oh Pétard ! T'as mis quoi dans ton pistou ?
+			</h2>
+			<p class="lead" style="max-width: 800px; margin: 0 auto;">
+				On aime se réunir autour d'une belle tablée faite des spécialités de chacun : de l'agneau de Roger, des olives de Tom, des bons p'tits plats de Tristan et Marius, de la soupe au pistou de Babeth !
+			</p>
+			<p class="lead" style="max-width: 800px; margin: 0 auto;">
+				Entre les récoltes d'olivers l'hiver, d'abricots l'été, la cueillette des champignons, le fromage de chèvre, les cocos de Mollans et les petits maraichers, le paysage buxois nous offrent une multitude de produits locaux qu'on compte bien vous faire déguster !
+			</p>
+		</div>
+	</section>
+
+	<section>
+		<div class="container px-3">
+			<h3 class="mb-4 text-center" style="color: var(--color-blue-light); font-family: var(--font-title);">
+				Retrouve notre stand de street food locale
+			</h3>
+			<div class="row text-center">
+				<div class="col-12 col-md-6 ">
+
+					<div class="date-restau mb-4 ">
+						<h4 class="m-0 lineup-text">
+							<span class="number ms-1">9h - 18h</span>Place aux herbes
+						</h4>
+					</div>
+				</div>
+				<div class="col-12 col-md-6 ">
+					<div class="date-restau mb-4 ">
+						<h4 class="m-0 lineup-text">
+							<span class="number ms-1">20h - 1h</span>La Palun
+						</h4>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="py-5">
+		<div class="container px-3">
+			<div class="row g-4 text-center">
+				<div class="col-md-4">
+					<i class="fa-solid fa-heart" style="color: var(--color-pink);"></i>
+					<h4 style="color: var(--color-blue-dark); font-family: var(--font-title);">Produits Locaux</h4>
+					<p style="color: var(--color-blue-dark);">Nos plats sont préparés avec des ingrédients frais issus des producteurs des Baronnies.</p>
+				</div>
+				<div class="col-md-4">
+					<i class="fa-solid fa-heart" style="color: var(--color-yellow);"></i>
+					<h4 style="color: var(--color-blue-dark); font-family: var(--font-title);">Cuisine Maison</h4>
+					<p style="color: var(--color-yeblue-darkllow);">Chaque recette est imaginée et cuisinée sur place par notre équipe de bénévoles passionnés.</p>
+				</div>
+				<div class="col-md-4">
+					<i class="fa-solid fa-heart" style="color: var(--color-red);"></i>
+					<h4 style="color: var(--color-blue-dark); font-family: var(--font-title);">Convivialité</h4>
+					<p style="color: var(--color-blue-dark);">Un moment de partage et de bonne humeur au cœur du festival, pour petits et grands.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="zones-texte bandeau-good-inscription py-3 text-center">
+		<h3 class="m-0 lineup-big d-flex flex-column flex-md-row align-items-center justify-content-center gap-2">
+			<span class="event">good food</span>
+			<span class="etoile d-none d-md-inline">*</span>
+			<span class="spot">good ride</span>
+			<span class="etoile d-none d-md-inline">*</span>
+			<span class="sector">good music</span>
+		</h3>
+	</section>
+
+	<div class="text-center mt-5 mb-4">
+		<a href="{{ path('app_home')}}">
+			<button class="btn btn-outline-primary">Retour</button>
+		</a>
+	</div>
+{% endblock %}

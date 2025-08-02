@@ -997,3 +997,61 @@ h1, h2, h3 {
 .date-prog h4 {
     color: var(--color-yellow-light);
 }
+
+
+/* ==============================================
+PAGE RESTAURATION
+   ============================================== */
+
+.restau-texte {
+    font-family: var(--font-text);
+    font-size: 1.1rem; 
+    color: var(--color-blue-dark);
+    font-weight: 900;
+}
+
+/* date tile restau */
+
+.date-restau {
+    background-color: var(--color-yellow); 
+    display: inline-block; 
+    padding: 20px 40px; 
+    border-radius: 8px; 
+    text-align: center; 
+    min-width: 200px; 
+}
+
+.date-restau .number {
+    font-size: 2.5rem; 
+    font-weight: bold;
+    display: block;
+    line-height: 1;
+}
+
+.date-restau h4 {
+    color: var(--color-yellow-light);
+}
+
+
+
+/* bandeau restau programamtions */
+
+.date-restau-prog {
+    background-color: var(--color-blue-light); 
+    display: inline-block; 
+    padding: 20px 40px; 
+    border-radius: 8px; 
+    text-align: center; 
+    min-width: 200px; 
+}
+
+.date-restau-prog .number {
+    font-size: 2.5rem; 
+    font-weight: bold;
+    display: block;
+    line-height: 1;
+}
+
+.date-restau-prog h4 {
+    color: var(--color-yellow-light);
+}
