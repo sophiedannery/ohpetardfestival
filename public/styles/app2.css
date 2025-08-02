@@ -252,6 +252,39 @@ h1, h2, h3 {
 }
 
 
+/* NAVBAR DROPDOWN */
+/* Couleur de fond du menu déroulant */
+.navbar .dropdown-menu {
+    background-color: var(--color-yellow-light); /* Jaune clair */
+    border: none; /* Supprime la bordure Bootstrap */
+    border-radius: 0.5rem; /* Coins arrondis */
+}
+
+/* Couleur des liens */
+.navbar .dropdown-menu .dropdown-item {
+    color: var(--color-red); /* Rouge */
+    font-weight: 600; /* Texte un peu plus gras */
+}
+
+/* Couleur au survol */
+.navbar .dropdown-menu .dropdown-item:hover,
+.navbar .dropdown-menu .dropdown-item:focus {
+    color: var(--color-yellow);
+    background-color: var(--color-yellow-light); /* Texte noir lisible */
+}
+
+/* Couleur au clic (état actif) */
+.navbar .dropdown-menu .dropdown-item:active,
+.navbar .dropdown-menu .dropdown-item.active {
+    background-color: var(--color-yellow-light); /* Orange pour clic */
+    color: var(--color-green); /* Texte blanc */
+}
+
+.navbar .dropdown-toggle::after {
+    display: none !important;
+}
+
+
 
 
 
