@@ -948,6 +948,12 @@ h1, h2, h3 {
     font-size: 1rem; 
 }
 
+.prog-event-title span {
+    font-family: var(--font-text);
+    font-size: 1rem; 
+    color: var(--color-pink);
+}
+
 .prog-event-link {
     display: inline-block;
     font-family: var(--font-text);
@@ -966,7 +972,7 @@ h1, h2, h3 {
 /* date tile prog */
 
 .date-prog {
-    background-color: var(--color-red); 
+    background-color: var(--color-yellow); 
     display: inline-block; 
     padding: 20px 40px; 
     border-radius: 8px; 

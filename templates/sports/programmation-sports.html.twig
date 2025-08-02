@@ -30,7 +30,7 @@
 				</div>
 
 				<!-- Colonne droite : Événements -->
-				<div class="col-12 col-md-8 mx-3 mx-md-0">
+				<div class="col-12 col-md-8 px-4 mx-md-0">
 
 					<div class="row align-items-start">
 						<div class="col-12 col-md-6">
@@ -40,23 +40,23 @@
 
 								<a href="{{ path('app_inscription_bloc')}}" data-turbo="false" class="prog-event-link ">Inscription</a>
 
-								<p class="mt-3 mb-0 fw-bold">
-									<span class="prog-horaire">13h30</span>
+								<p class="mt-3 mb-0">
+									<span class="prog-horaire me-2">13h30</span><br class="d-block d-md-none">
 									Première manche</p>
 								<p class="prog-event-location m-0">📍 Départ à Coquillon</p>
 
-								<p class="mt-3 mb-0 fw-bold">
-									<span class="prog-horaire">15h30</span>
+								<p class="mt-3 mb-0">
+									<span class="prog-horaire me-2">15h30</span><br class="d-block d-md-none">
 									Deuxième manche</p>
 								<p class="prog-event-location m-0">📍 Tout le village</p>
 
-								<p class="mt-3 mb-0 fw-bold">
-									<span class="prog-horaire">18h</span>
+								<p class="mt-3 mb-0 ">
+									<span class="prog-horaire me-2">18h</span><br class="d-block d-md-none">
 									Finale</p>
 								<p class="prog-event-location m-0">📍 Tout le village</p>
 
-								<p class="mt-3 mb-0 fw-bold">
-									<span class="prog-horaire">19h</span>
+								<p class="mt-3 mb-0">
+									<span class="prog-horaire me-2">19h</span><br class="d-block d-md-none">
 									Podiums</p>
 								<p class="prog-event-location m-0">📍 Place aux herbes</p>
 
@@ -69,10 +69,15 @@
 							<div class="prog-event mb-4 mt-5 mt-md-0">
 								<h5 class="prog-event-title">BLOC URBAIN</h5>
 								<a href="{{ path('app_inscription_bloc')}}" data-turbo="false" class="prog-event-link ">Inscription</a>
-								<p class="mt-3 mb-0 fw-bold">
-									<span class="prog-horaire">14h</span>
+								<p class="mt-3 mb-0">
+									<span class="prog-horaire me-2">14h - 18h</span><br class="d-block d-md-none">
 									Contest amical de bloc urbain</p>
 								<p class="prog-event-location m-0">📍 Tout le village</p>
+
+								<p class="mt-3 mb-0">
+									<span class="prog-horaire me-2">19h</span><br class="d-block d-md-none">
+									Podiums</p>
+								<p class="prog-event-location m-0">📍 Place aux herbes</p>
 							</div>
 
 						</div>
@@ -95,6 +100,12 @@
 			<span class="sector">good music</span>
 		</h3>
 	</section>
+
+	<div class="text-center mt-5 mb-4">
+		<a href="{{ path('app_rider_registration')}}">
+			<button class="btn btn-outline-primary">Retour</button>
+		</a>
+	</div>
 
 
 {% endblock %}
