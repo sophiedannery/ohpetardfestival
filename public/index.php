@@ -1,6 +1,5 @@
 <?php
 
-// 🚀 Forcer HTTPS et domaine officiel uniquement en production
 if (($_SERVER['APP_ENV'] ?? 'prod') === 'prod') {
     $host = $_SERVER['HTTP_HOST'] ?? '';
     $requestUri = $_SERVER['REQUEST_URI'] ?? '';
