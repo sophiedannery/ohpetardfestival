@@ -80,7 +80,7 @@ body {
     font-size: var(--font-size-base);
     background-color: var(--color-yellow-light);
     color: var(--color-blue-dark);
-    padding-top: 70px;
+    padding-top: 65px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -180,14 +180,14 @@ h1, h2, h3 {
 /* Bouton outline primaire */
 .btn-outline-primary {
   background-color: transparent;
- color: var(--color-red);  
- border: 1px solid var(--color-red);
+ color: var(--color-blue-light);  
+ border: 1px solid var(--color-blue-light);
 }
 
 .btn-outline-primary:hover {
-  background-color: #c91526;
+  background-color: var(--color-blue-light);
   color: var(--color-yellow-light);
-  border: 1px solid var(--color-red);
+  border: 1px solid var(--color-blue-light);
 }
 
 
@@ -646,49 +646,57 @@ h1, h2, h3 {
 
 
 
+
+
+
+
+
 /* ==============================================
-            PAGE INSCRIPTION
-    ============================================= */
-
-.section-carres-inscription {
-    position: relative;
-    margin-bottom: 200px; 
-}
-
-.section-carres-inscription h3 {
-    color: var(--color-yellow-light) !important;
-}
-    
-.carre-register {
-    border-radius: 30px; 
-    box-shadow: var(--shadow-light); 
-    transition: transform 0.2s ease;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-.carre-register:hover {
-    transform: translateY(-5px); 
-}
+   PAGE INSCRIPTION NEW
+   ============================================== */
 
 
-.carre-register-small { height: 350px; }
-.carre-register-medium { height: 350px; }
-
-
-.carre-register-img {
-    max-width: 70%;
-    position: absolute;
-}
-
-
-.carre-img-bloc { bottom: -20%; }
-.carre-img-dh { bottom: -15%; }
-
-.inscription h1 {
+.inscription-riders-title {
     color: var(--color-red);
 }
+
+.riders-choices-section .rider-choice-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.riders-choices-section .rider-choice-img {
+    width: 100%;
+    max-width: 600px;       /* Taille max identique */
+    height: auto;
+    aspect-ratio: 1 / 1;    /* Format carré harmonisé */
+    object-fit: contain;    /* Préserve l'image sans déformation */
+    transition: transform 0.3s ease;
+}
+
+.riders-choices-section .col-12 {
+    display: flex;
+    justify-content: center;
+}
+
+.riders-choices-section .rider-choice-link:hover .rider-choice-img {
+    transform: scale(1.05);
+}
+
+
+/* Responsive */
+@media (max-width: 576px) {
+    .riders-choices-section .rider-choice-img {
+        max-width: 600px;
+    }
+}
+
+
+
+
+
+
 
 
 
@@ -734,23 +742,36 @@ h1, h2, h3 {
 
 .bandeau-good-inscription .event {
     color: var(--color-pink);
-    font-size: 35px;
+    font-size: 40px;
 }
 
 .bandeau-good-inscription .spot {
     color: var(--color-yellow);
-    font-size: 35px;
+    font-size: 40px;
 }
 
 .bandeau-good-inscription .sector {
     color: var(--color-green);
-    font-size: 35px;
+    font-size: 40px;
 }
 
 .bandeau-good-inscription .etoile {
     color: var(--color-blue-dark);
-    font-size: 35px;
+    font-size: 40px;
     margin: 0 0rem; 
+}
+
+
+
+@media (max-width: 991.98px) {
+    .bandeau-good-inscription .event,
+    .bandeau-good-inscription .spot,
+    .bandeau-good-inscription .sector {
+        font-size: 30px; /* plus petit que 65px */
+    }
+    .bandeau-good-inscription .etoile {
+        font-size: 30px; /* optionnel : réduire aussi les étoiles */
+    }
 }
 
 
