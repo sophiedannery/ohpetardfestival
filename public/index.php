@@ -1,9 +1,10 @@
 <?php
 
-$host = $_SERVER['HTTP_HOST'] ?? '';
-
-if (!in_array($host, ['127.0.0.1', 'localhost'])) {
+// 🚀 Forcer HTTPS et domaine officiel uniquement en production
+if (($_SERVER['APP_ENV'] ?? 'prod') === 'prod') {
+    $host = $_SERVER['HTTP_HOST'] ?? '';
     $requestUri = $_SERVER['REQUEST_URI'] ?? '';
+
     if (
         (!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] !== 'on') ||
         ($host !== 'www.ohpetardfestival.com')
@@ -12,7 +13,6 @@ if (!in_array($host, ['127.0.0.1', 'localhost'])) {
         exit();
     }
 }
-
 
 use App\Kernel;
 
