@@ -49,6 +49,7 @@
 
   --font-title: 'Stinger Trial', sans-serif;
   --font-text: 'Louis George Cafe', sans-serif;
+  --font-number: "Londrina Solid", sans-serif;
 
   --font-size-base: 1.2rem;
   --font-size-title: 2.5rem;
@@ -914,3 +915,73 @@ h1, h2, h3 {
 
 
 
+
+/* ==============================================
+   PROGRAMMATION (Dates + Événements)
+   ============================================== */
+
+
+/* Événements */
+.prog-event {
+    margin-bottom: 1.5rem;
+}
+
+.prog-event-title {
+    font-family: var(--font-title);
+    color: var(--color-green);
+    text-transform: uppercase;
+    font-size: 1.5rem; 
+    font-weight: bold;
+}
+
+.prog-horaire {
+    font-family: var(--font-number);
+    color: var(--color-blue);
+    text-transform: uppercase;
+    font-size: 1.3rem; 
+    font-weight: bold;
+}
+
+.prog-event-location {
+    margin: 0 0 0.25rem 0;
+    font-family: var(--font-text);
+    font-size: 1rem; 
+}
+
+.prog-event-link {
+    display: inline-block;
+    font-family: var(--font-text);
+    text-decoration: underline;
+    color: var(--color-blue-dark);
+    transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.prog-event-link:hover {
+    color: var(--color-pink);
+    border-color: var(--color-pink);
+}
+
+
+
+/* date tile prog */
+
+.date-prog {
+    background-color: var(--color-red); 
+    display: inline-block; 
+    padding: 20px 40px; 
+    border-radius: 8px; 
+    text-align: center; 
+    min-width: 200px; 
+    text-align: center;
+}
+
+.date-prog .number {
+    font-size: 3rem; 
+    font-weight: bold;
+    display: block;
+    line-height: 1;
+}
+
+.date-prog h4 {
+    color: var(--color-yellow-light);
+}
