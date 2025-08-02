@@ -76,14 +76,16 @@
 			<div class="row justify-content-center g-4">
 
 				<div class="col-12 col-md-4 pb-5 pb-md-0">
-					<div class="carre carre-small bg-yellow d-flex flex-column align-items-center position-relative overflow-visible">
-						<h3 class="mt-2 fw-bold">MUSIQUE</h3>
-						<img src="{{ asset('assets/images/dj.png') }}" alt="Musique" class=" pb-5 pb-md-0 carre-img carre-img-musique">
-					</div>
+					<a href="{{ path('app_musique_prog') }}" class="text-decoration-none text-white" data-turbo="false">
+						<div class="carre carre-small bg-yellow d-flex flex-column align-items-center position-relative overflow-visible">
+							<h3 class="mt-2 fw-bold">MUSIQUE</h3>
+							<img src="{{ asset('assets/images/dj.png') }}" alt="Musique" class=" pb-5 pb-md-0 carre-img carre-img-musique">
+						</div>
+					</a>
 				</div>
 
 				<div class="col-12 col-md-4 pb-5 pb-md-0">
-					<a href="{{ path('app_sports_prog') }}" class="text-decoration-none text-white">
+					<a href="{{ path('app_sports_prog') }}" class="text-decoration-none text-white" data-turbo="false">
 						<div class="carre carre-medium bg-red d-flex flex-column align-items-center position-relative overflow-visible">
 							<h3 class="mt-2 fw-bold">SPORTS</h3>
 							<img src="{{ asset('assets/images/velo.png') }}" alt="Sports" class="pb-5 pb-md-0 carre-img carre-img-sports">
@@ -92,10 +94,12 @@
 				</div>
 
 				<div class="col-12 col-md-4">
-					<div class="carre carre-large bg-dark-blue d-flex flex-column align-items-center position-relative overflow-visible">
-						<h3 class="mt-2 fw-bold">AGRICULTURE</h3>
-						<img src="{{ asset('assets/images/marche.png') }}" alt="Agriculture" class="carre-img carre-img-agriculture">
-					</div>
+					<a href="{{ path('app_agri_prog') }}" class="text-decoration-none text-white" data-turbo="false">
+						<div class="carre carre-large bg-dark-blue d-flex flex-column align-items-center position-relative overflow-visible">
+							<h3 class="mt-2 fw-bold">AGRICULTURE</h3>
+							<img src="{{ asset('assets/images/marche.png') }}" alt="Agriculture" class="carre-img carre-img-agriculture">
+						</div>
+					</a>
 				</div>
 
 			</div>
