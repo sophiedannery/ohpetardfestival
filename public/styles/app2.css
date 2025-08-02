@@ -948,7 +948,13 @@ h1, h2, h3 {
     font-size: 1rem; 
 }
 
-.prog-event-title span {
+/* .prog-event-title span {
+    font-family: var(--font-text);
+    font-size: 1rem; 
+    color: var(--color-pink);
+} */
+
+.prog-event-title .prog-kid-friendly {
     font-family: var(--font-text);
     font-size: 1rem; 
     color: var(--color-pink);
