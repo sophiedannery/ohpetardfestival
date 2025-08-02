@@ -1,0 +1,113 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Politique de confidentialité
+{% endblock %}
+
+{% block body %}
+
+	<section class="hero-desktop">
+		<img src="{{ asset('assets/images/hero-politique.png')}}" alt="Oh Pétard Festival">
+	</section>
+
+	<section class="hero-mobile">
+		<img src="{{ asset('assets/images/hero-mobile-politique.png')}}" alt="Oh Pétard Festival">
+	</section>
+
+    <section class="politique-confidentialite" style="max-width:900px;margin:auto;padding:2rem;line-height:1.6;">
+  <h1>Politique de confidentialité</h1>
+
+  <p>
+    L’association <strong>Oh Pétard</strong> attache une grande importance à la protection de vos données personnelles 
+    et au respect de votre vie privée. Conformément au <strong>Règlement Général sur la Protection des Données (RGPD)</strong>, 
+    nous vous expliquons ici quelles informations sont collectées, par qui et dans quel but.
+  </p>
+
+  <h2>1. Collecte des données</h2>
+  <p>
+    Le site internet <strong>ohpetardfestival.fr</strong> ne collecte aucune donnée personnelle directement via ses pages.
+    Les inscriptions aux activités et les formulaires sont gérés par des services tiers :
+  </p>
+  <ul>
+    <li><strong>Riders</strong> : inscription via la plateforme <strong>HelloAsso</strong></li>
+    <li><strong>Bénévoles</strong> : inscription via <strong>Google Forms</strong></li>
+  </ul>
+  <p>
+    Lorsque vous utilisez ces services, vos données sont traitées conformément à leurs propres politiques de confidentialité 
+    et conditions d’utilisation, que nous vous invitons à consulter :
+  </p>
+  <ul>
+    <li>HelloAsso : <a href="https://www.helloasso.com/confidentialite" target="_blank" rel="noopener">Politique de confidentialité HelloAsso</a></li>
+    <li>Google : <a href="https://policies.google.com/privacy?hl=fr" target="_blank" rel="noopener">Politique de confidentialité Google</a></li>
+  </ul>
+
+  <h2>2. Utilisation des données</h2>
+  <p>
+    Les données collectées via HelloAsso et Google Forms sont utilisées uniquement dans le cadre 
+    de l’organisation du festival Oh Pétard (gestion des inscriptions, organisation des missions, 
+    communication liée à l’événement).
+  </p>
+
+  <h2>3. Base légale du traitement</h2>
+  <p>
+    Les traitements effectués par ces plateformes reposent sur :
+  </p>
+  <ul>
+    <li>Votre <strong>consentement</strong> (par exemple, lorsque vous remplissez un formulaire d’inscription)</li>
+    <li>L’<strong>exécution d’un contrat</strong> (par exemple, lors de l’achat d’un billet)</li>
+  </ul>
+
+  <h2>4. Durée de conservation</h2>
+  <p>
+    La durée de conservation des données est définie par les services tiers (HelloAsso, Google Forms).
+    Nous vous invitons à consulter leurs politiques respectives pour plus d’informations.
+  </p>
+
+  <h2>5. Droits des utilisateurs</h2>
+  <p>
+    Conformément au RGPD, vous disposez des droits suivants :
+  </p>
+  <ul>
+    <li>Droit d’accès à vos données</li>
+    <li>Droit de rectification</li>
+    <li>Droit de suppression</li>
+    <li>Droit d’opposition au traitement</li>
+  </ul>
+  <p>
+    Pour exercer vos droits concernant les données collectées via HelloAsso ou Google Forms, 
+    veuillez contacter directement leurs services.  
+    Vous pouvez également nous contacter à : <a href="#">asso.ohpetard@gmail.com</a>
+  </p>
+
+  <h2>6. Cookies</h2>
+  <p>
+    Ce site n’utilise que des cookies techniques nécessaires à son bon fonctionnement et ne dépose aucun cookie 
+    de suivi à des fins publicitaires ou analytiques.
+  </p>
+
+  <h2>7. Contact et CNIL</h2>
+  <p>
+    Pour toute question concernant cette politique, vous pouvez nous écrire à : 
+    <a href="#">asso.ohpetard@gmail.com</a><br>
+    Pour plus d’informations sur vos droits, vous pouvez consulter le site de la CNIL : 
+    <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>
+    Pour plus d’informations légales concernant le site, vous pouvez consulter nos 
+    <a href="{{ path ('app_mentions_legales')}}" target="_blank" rel="noopener">Mentions Légales</a>
+  </p>
+
+  <p style="margin-top:2rem;font-size:0.9em;">
+    Dernière mise à jour : aôut 2025
+  </p>
+</section>
+
+
+
+	
+
+	
+
+	<div class="text-center mt-5 mb-4">
+		<a href="{{ path('app_home')}}">
+			<button class="btn btn-outline-primary">Retour</button>
+		</a>
+	</div>
+{% endblock %}

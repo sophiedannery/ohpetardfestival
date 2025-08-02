@@ -1,0 +1,98 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mentions Légales
+{% endblock %}
+
+{% block body %}
+
+	<section class="hero-desktop">
+		<img src="{{ asset('assets/images/hero-mentions.png')}}" alt="Oh Pétard Festival">
+	</section>
+
+	<section class="hero-mobile">
+		<img src="{{ asset('assets/images/hero-mobile-mentions.png')}}" alt="Oh Pétard Festival">
+	</section>
+
+    <section class="mentions-legales" style="max-width:900px;margin:auto;padding:2rem;line-height:1.6;">
+  <h1>Mentions légales</h1>
+
+  <h2>Éditeur du site</h2>
+  <p>
+    Site : <strong>Oh Pétard Festival</strong><br>
+    Organisateur : <strong>Association Oh Pétard</strong> (Association loi 1901)<br>
+    Siège social : 374 Route de Buis-les-Baronnies 26170 La Roche-sur-le-Buis<br>
+    SIRET : 94128986000012<br>
+    Responsable de la publication : Charline Vial-Jaime<br>
+    Conception et réalisation : Sophie Alley<br>
+    Contact : <a href="#">asso.ohpetard@gmail.com</a>
+  </p>
+
+  <h2>Hébergement</h2>
+  <p>
+    Hébergeur : <strong>Heroku</strong> – Salesforce.com Inc.<br>
+    Adresse : 415 Mission Street, 3rd Floor, San Francisco, CA 94105, États-Unis<br>
+    Site web : <a href="https://www.heroku.com" target="_blank" rel="noopener">www.heroku.com</a>
+  </p>
+
+  <h2>Propriété intellectuelle</h2>
+  <p>
+    L’ensemble des contenus présents sur ce site (textes, images, vidéos, graphismes, logos, icônes, etc.) 
+    est la propriété exclusive de l’association Oh Pétard ou de leurs auteurs respectifs, sauf mention contraire.
+    Toute reproduction, représentation, modification, publication, transmission ou adaptation, totale ou partielle, 
+    de ce site ou de son contenu, par quelque procédé que ce soit, est interdite sans autorisation écrite préalable.
+    L’utilisation à des fins personnelles et non commerciales est autorisée, sous réserve du respect de l’intégrité
+    des contenus et de la mention de leur source.
+  </p>
+
+  <h2>Protection des données personnelles (RGPD)</h2>
+  <p>
+    Le site du Oh Pétard Festival ne collecte aucune donnée personnelle directement via ses pages.
+    Les formulaires d’inscription (bénévoles, riders) et la billetterie sont gérés par des prestataires tiers 
+    tels que <strong>HelloAsso</strong> ou d’autres plateformes externes. Lorsque vous utilisez ces services, 
+    vos données sont traitées conformément à leurs propres politiques de confidentialité et conditions d’utilisation,
+    que nous vous invitons à consulter directement sur leurs sites respectifs.<br>
+    Pour plus d'informations sur la manière dont nous traitons les données personnelles, veuillez consulter notre <a href="{{ path ('app_politique_confidentialite')}}">Politique de confidentialité</a>
+  </p>
+  <p>
+    <strong>Base légale du traitement :</strong> consentement ou exécution d’un contrat selon le service utilisé.<br>
+    <strong>Droits des utilisateurs :</strong> accès, rectification, opposition, suppression.<br>
+    Pour exercer vos droits concernant les données collectées par ces services tiers, 
+    veuillez vous adresser directement à leur service de gestion des données personnelles.
+  </p>
+  <p>
+    Contact pour toute question relative à la protection des données : 
+    <a href="#">asso.ohpetard@gmail.com</a><br>
+    Plus d’informations sur vos droits : <a href="https://www.cnil.fr" target="_blank" rel="noopener">www.cnil.fr</a>
+  </p>
+
+  <h2>Cookies</h2>
+  <p>
+    Ce site ne dépose pas de cookies de suivi à des fins publicitaires. 
+    Certains cookies techniques peuvent être utilisés pour assurer le bon fonctionnement du site.
+  </p>
+
+  <h2>Limitation de responsabilité</h2>
+  <p>
+    L’association Oh Pétard ne saurait être tenue responsable des dommages directs ou indirects 
+    résultant de l’accès au site ou de l’utilisation des informations qu’il contient.
+    Les liens hypertextes vers d’autres sites internet sont donnés à titre indicatif 
+    et n’engagent pas la responsabilité de l’association Oh Pétard quant à leur contenu.
+  </p>
+
+  <p style="margin-top:2rem;font-size:0.9em;">
+    © 2025 Oh Pétard Festival – Tous droits réservés
+  </p>
+</section>
+
+
+
+	
+
+	
+
+	<div class="text-center mt-5 mb-4">
+		<a href="{{ path('app_home')}}">
+			<button class="btn btn-outline-primary">Retour</button>
+		</a>
+	</div>
+{% endblock %}
