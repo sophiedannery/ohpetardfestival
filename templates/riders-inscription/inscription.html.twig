@@ -4,39 +4,47 @@
 {% endblock %}
 
 {% block body %}
-	<section class="inscription">
-		<div style="text-align:center; margin-top:50px;">
-			<h1>Tu t'inscris où ?</h1>
-			<p>Contest amical de bloc urbain ou parcours de DH Urbaine.
+
+
+	<section class="inscription-riders px-3">
+		<div class="text-center my-5">
+
+			<h1 class="inscription-riders-title">Tu t'inscris où ?</h1>
+			<p class="inscription-riders-subtitle">
+				Contest amical de bloc urbain ou parcours de DH Urbaine.
 			</p>
 
-			<section class="section-carres-inscription  text-center py-5">
+			<section class="riders-choices-section text-center ">
+
 				<div class="container">
-					<div class="row justify-content-center g-4">
+					<div
+						class="row justify-content-center g-4">
+
+						<!-- Image Bloc Urbain -->
 						<div class="col-12 col-md-6">
-							<a href="{{ path('app_inscription_bloc') }}" class="carre carre-register-small bg-green d-flex flex-column align-items-center position-relative overflow-visible text-decoration-none text-dark">
-								<h3 class="mt-2 fw-bold">BLOC URBAIN</h3>
-								<img src="{{ asset('assets/images/grimpeur.png') }}" alt="Musique" class="carre-img carre-img-musique">
+							<a href="{{ path('app_inscription_dh') }}" class="rider-choice-link">
+								<img src="{{ asset('assets/images/carre-dh.png') }}" alt="Bloc Urbain" class="rider-choice-img">
 							</a>
 						</div>
 
+						<!-- Image DH Urbaine -->
 						<div class="col-12 col-md-6">
-							<a href="{{ path('app_inscription_dh') }}" class="carre carre-register-medium bg-red d-flex flex-column align-items-center position-relative overflow-visible ">
-								<h3 class="mt-2 fw-bold">DH URBAINE</h3>
-								<img src="{{ asset('assets/images/velo.png') }}" alt="Sports" class="carre-img carre-img-sports">
+							<a href="{{ path('app_inscription_bloc') }}" class="rider-choice-link">
+								<img src="{{ asset('assets/images/carre-bloc.png') }}" alt="DH Urbaine" class="rider-choice-img">
 							</a>
 						</div>
 
 					</div>
+
+					<!-- Bouton retour -->
+					<div class="text-center my-5">
+						<a href="{{ path('app_home') }}">
+							<button class="btn btn-outline-primary">Retour</button>
+						</a>
+					</div>
 				</div>
 			</section>
-
-			<div class="text-center my-5">
-				<a href="{{ path('app_home')}}">
-					<button class="btn btn-outline-primary">Retour</button>
-				</a>
-			</div>
-
 		</div>
 	</section>
+
 {% endblock %}

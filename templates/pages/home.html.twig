@@ -6,42 +6,16 @@
 {% block body %}
 
 
-	<section class="hero-logos">
-		<div class="container">
-
-			<div class="row align-items-center text-center">
-				<div class="col-4 position-relative">
-					<img src="{{ asset('assets/images/grimpeur.png')}}" class="grimpeur" alt="Grimpeur">
-				</div>
-				<div class="col-4">
-					<img src="{{ asset('assets/logos/Logo_festival.png')}}" alt="Logo Oh Pétard Festival" style="width: 100%; max-width: 400px; display: block;">
-				</div>
-				<div class="col-4">
-					<img src="{{ asset('assets/images/velo.png')}}" alt="Vélo" style="width: 100%; max-width: 350px; display: block;">
-				</div>
-			</div>
-
-		</div>
+	<section class="hero-desktop">
+		<img src="{{ asset('assets/images/Frame9.png')}}" alt="Oh Pétard Festival">
 	</section>
 
-	<section class="zones-texte text-center">
-
-		<div class="row g-0">
-			<div class="col-4 d-flex align-items-center justify-content-center bg-red text-yellow-light fw-bold py-3">
-				<h2 class="m-0">buis<br>les<br>baronnies</h2>
-			</div>
-			<div class="col-4 d-flex align-items-center justify-content-center bg-yellow text-yellow-light fw-bold py-3">
-				<h2 class="m-0">good food<br>good ride<br>good music</h2>
-			</div>
-			<div class="col-4 d-flex align-items-center justify-content-center bg-dark-blue text-yellow-light fw-bold py-3">
-				<h2 class="m-0">
-					<span class="number me-1">26</span>*<span class="number ms-1">27</span><br>septembre</h2>
-			</div>
-		</div>
-
+	<section class="hero-mobile">
+		<img src="{{ asset('assets/images/Frame10.png')}}" alt="Oh Pétard Festival">
 	</section>
 
-	<section class="lineup-section text-center bg-pink">
+
+	<section class="lineup-section text-center bg-pink d-none d-md-block">
 		<div class="row g-0">
 			<div class="col-12  py-5 d-flex align-items-center flex-column">
 				<div class="lineup-text text-yellow-light">
@@ -50,7 +24,7 @@
 					<div class="lineup-small mb-4">TRACTO'SONO * SHOW TRIAL * CUVÉE OH PÉTARD</div>
 					<div class="lineup-xsmall mb-4">TABLE RONDE * STREET FOOD LOCALE *• ANIMATIONS FAMILLE</div>
 				</div>
-				<div class=" cta-buttons mt-5">
+				<div class=" cta-buttons mt-2 mt-lg-5">
 					<a href="{{ path('app_billeterie')}}" class="btn btn-secondary me-4">Billetterie</a>
 					<a href="{{ path('app_rider_registration')}}" class="btn btn-secondary">Inscriptions</a>
 				</div>
@@ -58,12 +32,26 @@
 		</div>
 	</section>
 
-	<section class="zones-texte bandeau-good py-3 text-center">
-		<h3 class="m-0 lineup-big">
+	<section class="lineup-section-mobile text-center bg-pink d-block d-md-none">
+		<div class="row g-0">
+			<div class="col-12  py-5 d-flex align-items-center flex-column">
+				<div class="lineup-text text-yellow-light">
+					<div class="lineup-big lineup-big-mobile mb-4 px-4">DH URBAINE * CONCERTS DJ SET * CONTEST BLOC URBAIN * CINÉ DÉBAT * TRACTO'SONO * SHOW TRIAL * CUVÉE OH PÉTARD * TABLE RONDE * STREET FOOD LOCALE * ANIMATIONS FAMILLE</div>
+				</div>
+				<div class=" cta-buttons mt-1">
+					<a href="{{ path('app_billeterie')}}" class="btn btn-secondary me-4">Billetterie</a>
+					<a href="{{ path('app_rider_registration')}}" class="btn btn-secondary">Inscriptions</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="zones-texte bandeau-good py-3 text-center d-none d-sm-block">
+		<h3 class="m-0 lineup-big d-flex flex-column flex-sm-row align-items-center justify-content-center gap-2">
 			<span class="food">good food</span>
-			<span class="etoile">*</span>
+			<span class="etoile d-none d-sm-inline">*</span>
 			<span class="ride">good ride</span>
-			<span class="etoile">*</span>
+			<span class="etoile d-none d-sm-inline">*</span>
 			<span class="music">good music</span>
 		</h3>
 	</section>
@@ -82,52 +70,60 @@
 
 
 	<section class="section-carres text-center py-5">
+
 		<div class="container">
+
 			<div class="row justify-content-center g-4">
-				<div class="col-12 col-md-4">
+
+				<div class="col-12 col-md-4 pb-5 pb-md-0">
 					<div class="carre carre-small bg-yellow d-flex flex-column align-items-center position-relative overflow-visible">
 						<h3 class="mt-2 fw-bold">MUSIQUE</h3>
-						<img src="{{ asset('assets/images/dj.png') }}" alt="Musique" class="carre-img carre-img-musique">
+						<img src="{{ asset('assets/images/dj.png') }}" alt="Musique" class=" pb-5 pb-md-0 carre-img carre-img-musique">
 					</div>
 				</div>
-				<div class="col-12 col-md-4">
+
+				<div class="col-12 col-md-4 pb-5 pb-md-0">
 					<div class="carre carre-medium bg-red d-flex flex-column align-items-center position-relative overflow-visible">
 						<h3 class="mt-2 fw-bold">SPORTS</h3>
-						<img src="{{ asset('assets/images/velo.png') }}" alt="Sports" class="carre-img carre-img-sports">
+						<img src="{{ asset('assets/images/velo.png') }}" alt="Sports" class="pb-5 pb-md-0 carre-img carre-img-sports">
 					</div>
 				</div>
+
 				<div class="col-12 col-md-4">
 					<div class="carre carre-large bg-dark-blue d-flex flex-column align-items-center position-relative overflow-visible">
 						<h3 class="mt-2 fw-bold">AGRICULTURE</h3>
 						<img src="{{ asset('assets/images/marche.png') }}" alt="Agriculture" class="carre-img carre-img-agriculture">
 					</div>
 				</div>
+
 			</div>
 		</div>
 	</section>
 
 
 	<section class="zones-texte bandeau-good py-3 text-center">
-		<h3 class="m-0 lineup-big">
+		<h3 class="m-0 lineup-big d-flex flex-column flex-sm-row align-items-center justify-content-center gap-2">
 			<span class="food">good food</span>
-			<span class="etoile">*</span>
+			<span class="etoile d-none d-sm-inline">*</span>
 			<span class="ride">good ride</span>
-			<span class="etoile">*</span>
+			<span class="etoile d-none d-sm-inline">*</span>
 			<span class="music">good music</span>
 		</h3>
 	</section>
 
 
-	<section class="section-animations-food py-5 position-relative mt-4">
-		<div class="container text-start">
+	<section class="section-animations-food py-5 position-relative mt-4 mb-5 mb-md-0">
 
-			<div class="bloc-info mb-5">
+		<div class="container px-4">
+
+			<div class="bloc-info mb-5 ">
 				<h2 class="fw-bold text-uppercase mb-1 lineup-big">Animations</h2>
 				<p>
 					Parce qu'un festival, c'est aussi de la curiosité, de la détente et des sourires, on vous a préparé une ribambelle d'animations ludiques et artistiques, pour les jeunes de 7 à 77 ans !
 				</p>
 				<a href="#animations" class="link-more">En savoir plus</a>
 			</div>
+
 			<div class="bloc-info">
 				<h2 class="fw-bold text-uppercase mb-1 lineup-big">Street Food Locale</h2>
 				<p>
@@ -144,15 +140,13 @@
 	<section class="benevoles-section py-5">
 		<div class="container benevoles-container">
 			<div class="row align-items-center">
-				<div class="col-12 col-md-8">
+				<div class="col-12 col-md-8 text-center text-md-start px-5 ">
 					<h2 class="fw-bold text-red">Rejoins la team des bénévoles</h2>
 					<p>
-						Le Oh Pétard festival, c’est surtout une belle aventure collective. Envie de filer un coup de main, de vivre les coulisses du festival et de partager de bons moments ? 
-																																																																																																																																																																																																																																																																																																																																																																								Que tu sois pro du gaffer, as du service, ou juste plein·e de bonne humeur, rejoins-nous !
+						Le Oh Pétard festival, c’est surtout une belle aventure collective. Envie de filer un coup de main, de vivre les coulisses du festival et de partager de bons moments ? Que tu sois pro du gaffer, as du service, ou juste plein·e de bonne humeur, rejoins-nous !
 					</p>
 				</div>
-
-				<div class="col-12 col-md-4 text-md-end mt-3 mt-md-0">
+				<div class="col-12 col-md-4 text-center text-md-end mt-3 mt-md-0 px-5 ">
 					<a href="https://docs.google.com/forms/d/19NBb4TzEdwFG33s_4wIVZ9zybj-PkYp9rxBr82yKadA/viewform?edit_requested=true" class="btn btn-primary btn-lg" target="_blank" rel="noopener noreferrer">
 						Devenir bénévole
 					</a>
@@ -162,7 +156,7 @@
 	</section>
 
 
-	<section class="zones-texte bandeau-good py-3 text-center">
+	<section class="zones-texte bandeau-good py-3 text-center d-none d-sm-block">
 		<h3 class="m-0 lineup-big">
 			<span class="food">good food</span>
 			<span class="etoile">*</span>
@@ -172,7 +166,7 @@
 		</h3>
 	</section>
 
-	<section class="section-adherer py-5 position-relative">
+	<section class="section-adherer position-relative py-0 py-md-5 mb-5 mb-md-0">
 		<div class="container">
 
 			<div class="adhesion-box text-center p-5 p-md-5">

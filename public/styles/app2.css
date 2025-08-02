@@ -38,7 +38,7 @@
     ============================================= */
 
 :root {
-  --color-yellow-light: #FDEFCF    ;
+  --color-yellow-light: #FEF7E6    ;
   --color-blue-dark:   #0D4E8E;
   --color-red:         #E51C30;
   --color-yellow:      #EEAC19;
@@ -71,6 +71,8 @@
 
 html {
   scroll-behavior: smooth;
+  height: 100%;
+  margin: 0;
 }
 
 body {
@@ -78,7 +80,14 @@ body {
     font-size: var(--font-size-base);
     background-color: var(--color-yellow-light);
     color: var(--color-blue-dark);
-    padding-top: 70px;
+    padding-top: 65px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
 }
 
 html, body {
@@ -114,6 +123,10 @@ h1, h2, h3 {
 .small-text {
     font-family: var(--font-text);
     font-size: 1rem;
+    color: var(--color-blue-dark);
+}
+
+.text-blue {
     color: var(--color-blue-dark);
 }
 
@@ -167,14 +180,14 @@ h1, h2, h3 {
 /* Bouton outline primaire */
 .btn-outline-primary {
   background-color: transparent;
- color: var(--color-red);  
- border: 1px solid var(--color-red);
+ color: var(--color-blue-light);  
+ border: 1px solid var(--color-blue-light);
 }
 
 .btn-outline-primary:hover {
-  background-color: #c91526;
+  background-color: var(--color-blue-light);
   color: var(--color-yellow-light);
-  border: 1px solid var(--color-red);
+  border: 1px solid var(--color-blue-light);
 }
 
 
@@ -240,50 +253,37 @@ h1, h2, h3 {
 
 
 
+
+
+
+
+
 /* ==============================================
-            HERO
+            HERO SECTION HOME PAGE RESPONSIVE
     ============================================= */
 
-.hero-logos {
-    position: relative;
-    z-index: 2; 
-}
-
-.hero-logos .col-4 {
-    position: relative; 
-}
-
-.hero-logos .col-4:first-child {
-    align-self: flex-start; /* le grimpeur commence en haut de la ligne */
-}
-
-.grimpeur {
+.hero-desktop img,
+.hero-mobile img {
     width: 100%;
-    max-width: 300px;
+    height: auto;
     display: block;
-    position: absolute;
-    top: 0; /* point de départ en haut */
-    transform: translateY(20px); /* le fait descendre */
-    left: 50%;
-    transform: translate(-50%, 70px); /* centré horizontalement + descente */
-    z-index: 3;
 }
 
-.rectangles {
-    position: relative;
-    z-index: 1; 
+/* Par défaut : masquer la version mobile */
+.hero-mobile {
+    display: none;
 }
 
-.bg-pink { background-color: var(--color-pink); }
-.bg-yellow { background-color: var(--color-yellow); }
-.bg-blue { background-color: var(--color-blue-light); }
-
-.zones-texte h1,
-.zones-texte h2,
-.zones-texte h3 {
-    font-family: 'Stinger Trial Heavy';
-    font-size: 45px;
+/* Mobile : afficher la version mobile, cacher la version desktop */
+@media (max-width: 767px) {
+    .hero-desktop {
+        display: none;
+    }
+    .hero-mobile {
+        display: block;
+    }
 }
+
 
 
 
@@ -292,6 +292,7 @@ h1, h2, h3 {
     ============================================= */
 
 .lineup-section {
+    padding: 0rem 1rem;
     position: relative;
 }
 
@@ -327,6 +328,51 @@ h1, h2, h3 {
     font-weight: bold;
 }
 
+.lineup-big-mobile {
+    line-height: 1.6;
+}
+
+/* Tablettes (≤ 992px) */
+@media (max-width: 992px) {
+    .lineup-big {
+        font-size: 2.5rem;
+    }
+    .lineup-medium {
+        font-size: 2rem;
+    }
+    .lineup-small {
+        font-size: 1.7rem;
+    }
+    .lineup-xsmall {
+        font-size: 1.3rem;
+    }
+}
+
+/* Mobiles (≤ 576px) */
+@media (max-width: 576px) {
+    .lineup-big {
+        font-size: 2rem;
+    }
+    .lineup-medium {
+        font-size: 1.7rem;
+    }
+    .lineup-small {
+        font-size: 1.5rem;
+    }
+    .lineup-xsmall {
+        font-size: 1.3rem;
+    }
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    .cta-buttons .btn {
+        width: 100%;
+    }
+
+    
+}
 .text-yellow-light {
     color: var(--color-yellow-light) !important;
 }
@@ -337,43 +383,77 @@ h1, h2, h3 {
   color: var(--color-red);
 }
 
+
+
+
+
+
+
 /* ==============================================
-            CARRES X3
-    ============================================= */
+   SECTION CARRES (MUSIQUE / SPORTS / AGRICULTURE)
+   ============================================== */
 
-
+/* Style général pour chaque bloc carré */
 .carre {
-    border-radius: 15px; 
-    box-shadow: var(--shadow-light); 
-    transition: transform 0.2s ease;
+    border-radius: 15px;                  /* Coins arrondis */
+    box-shadow: var(--shadow-light);       /* Ombre légère */
+    transition: transform 0.2s ease;       /* Animation au survol */
     cursor: pointer;
-    position: relative;
-    overflow: visible;
+    position: relative;                    /* Nécessaire pour placer l'image en absolute */
+    overflow: visible;                     /* Permet à l'image de déborder */
 }
 
 .carre:hover {
-    transform: translateY(-5px); 
+    transform: translateY(-5px);           /* Légère élévation au survol */
 }
 
-
+/* Hauteur fixe de chaque type de carré */
 .carre-small { height: 200px; }
 .carre-medium { height: 240px; }
 .carre-large { height: 280px; }
 
 
+/* Styles communs aux images */
 .carre-img {
-    max-width: 300px;
-    position: absolute;
+    max-width: 300px;                      /* Taille maximale sur desktop */
+    position: absolute;                    /* Positionnement libre */
 }
 
 
-.carre-img-musique { bottom: -50px; }
+/* Positionnement spécifique pour chaque image sur DESKTOP */
+.carre-img-musique { bottom: -100px; }
 .carre-img-sports { bottom: -100px; }
 .carre-img-agriculture { bottom: -70px; }
 
 
+/* Couleur du titre dans les carrés */
 .section-carres h3 {
     color: var(--color-yellow-light);
+}
+
+/* ===== Tablette (Bootstrap md : 768px → 1199px) ===== */
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+    .carre-small { height: 180px; }
+.carre-medium { height: 200px; }
+.carre-large { height: 220px; }
+
+    .carre-img {  max-width: 200px;   }
+    .carre-img-musique { bottom: -20px; }     
+    .carre-img-sports { bottom: -50px; }
+    .carre-img-agriculture { bottom: -40px; }
+}
+
+
+/* ===== Mobile (≤ 767px) ===== */
+@media (max-width: 767.98px) {
+    .carre {
+        padding-bottom: 3rem; 
+    }
+    .carre-img { max-width: 300px; }
+    .carre-img-musique { bottom: -80px; }
+    .carre-img-sports { bottom: -130px; }
+    .carre-img-agriculture { bottom: -70px; }
 }
 
 
@@ -433,6 +513,29 @@ h1, h2, h3 {
     z-index: 2;     
 }
 
+@media (max-width: 1200px) { 
+    .illu-sandwich {
+        max-width: 300px; 
+        bottom: -110px;    
+        right: -30px;     
+    }
+}
+
+@media (max-width: 900px) { 
+    .illu-sandwich {
+        max-width: 200px; 
+        bottom: -80px;    
+        right: -20px;     
+    }
+}
+
+
+.section-animations-food .bloc-info {
+    max-width: 900px; /* limite la largeur */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+}
 
 
 /* ==============================================
@@ -479,6 +582,17 @@ h1, h2, h3 {
     margin: 0 0.5rem; 
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .bandeau-good .food,
+    .bandeau-good .ride,
+    .bandeau-good .music {
+        font-size: 45px; /* plus petit que 65px */
+    }
+    .bandeau-good .etoile {
+        font-size: 40px; /* optionnel : réduire aussi les étoiles */
+    }
+}
+
 
 /* ==============================================
             ADHESION
@@ -515,51 +629,74 @@ h1, h2, h3 {
     z-index: 2;     
 }
 
+@media (min-width: 901px) and (max-width: 1200px)  { 
+    .illu-micro {
+        bottom: -35px; 
+        left: -70px;   
+    }
+}
+
+@media (max-width: 900px) { 
+    .illu-micro {
+        max-width: 200px; 
+        bottom: -80px;  
+        left: -65px;   
+    }
+}
+
+
+
+
+
+
 
 
 /* ==============================================
-            PAGE INSCRIPTION
-    ============================================= */
-
-.section-carres-inscription {
-    position: relative;
-    margin-bottom: 200px; 
-}
-
-.section-carres-inscription h3 {
-    color: var(--color-yellow-light) !important;
-}
-    
-.carre {
-    border-radius: 30px; 
-    box-shadow: var(--shadow-light); 
-    transition: transform 0.2s ease;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-}
-
-.carre:hover {
-    transform: translateY(-5px); 
-}
+   PAGE INSCRIPTION NEW
+   ============================================== */
 
 
-.carre-register-small { height: 350px; }
-.carre-register-medium { height: 350px; }
-
-
-.carre-img {
-    max-width: 70%;
-    position: absolute;
-}
-
-
-.carre-img-musique { bottom: -60%; }
-.carre-img-sports { bottom: -50%; }
-
-.inscription h1 {
+.inscription-riders-title {
     color: var(--color-red);
 }
+
+.riders-choices-section .rider-choice-link {
+    display: inline-block;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.riders-choices-section .rider-choice-img {
+    width: 100%;
+    max-width: 600px;       /* Taille max identique */
+    height: auto;
+    aspect-ratio: 1 / 1;    /* Format carré harmonisé */
+    object-fit: contain;    /* Préserve l'image sans déformation */
+    transition: transform 0.3s ease;
+}
+
+.riders-choices-section .col-12 {
+    display: flex;
+    justify-content: center;
+}
+
+.riders-choices-section .rider-choice-link:hover .rider-choice-img {
+    transform: scale(1.05);
+}
+
+
+/* Responsive */
+@media (max-width: 576px) {
+    .riders-choices-section .rider-choice-img {
+        max-width: 600px;
+    }
+}
+
+
+
+
+
+
 
 
 
@@ -605,23 +742,36 @@ h1, h2, h3 {
 
 .bandeau-good-inscription .event {
     color: var(--color-pink);
-    font-size: 35px;
+    font-size: 40px;
 }
 
 .bandeau-good-inscription .spot {
     color: var(--color-yellow);
-    font-size: 35px;
+    font-size: 40px;
 }
 
 .bandeau-good-inscription .sector {
     color: var(--color-green);
-    font-size: 35px;
+    font-size: 40px;
 }
 
 .bandeau-good-inscription .etoile {
     color: var(--color-blue-dark);
-    font-size: 35px;
+    font-size: 40px;
     margin: 0 0rem; 
+}
+
+
+
+@media (max-width: 991.98px) {
+    .bandeau-good-inscription .event,
+    .bandeau-good-inscription .spot,
+    .bandeau-good-inscription .sector {
+        font-size: 30px; /* plus petit que 65px */
+    }
+    .bandeau-good-inscription .etoile {
+        font-size: 30px; /* optionnel : réduire aussi les étoiles */
+    }
 }
 
 
@@ -704,3 +854,30 @@ h1, h2, h3 {
 .billetterie-page .fa-brands:hover {
     color: var(--color-pink);
 }
+
+
+
+.billetterie-image {
+    width: 100%;
+    max-width: 400px; /* desktop par défaut */
+}
+
+/* Tablette (768px → 991px) */
+@media (max-width: 991.98px) {
+    .billetterie-image {
+        max-width: 300px;
+    }
+}
+
+/* Mobile (≤ 767px) */
+@media (max-width: 767.98px) {
+    .billetterie-image {
+        max-width: 220px;
+    }
+}
+
+
+
+
+
+
